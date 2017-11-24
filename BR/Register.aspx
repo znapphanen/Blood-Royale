@@ -36,6 +36,10 @@
             <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click"></asp:Button>
         </div>
 
+
+        <asp:Label ID="lblError" runat="server" ForeColor="Black" Hidden="true"></asp:Label>
     </form>
+
+    <script src="JavaScript1.js"></script>
 </body>
 </html>

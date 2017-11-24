@@ -480,7 +480,11 @@ namespace BR.ExtraLib
 
 
         #region users
-
+        /// <summary>
+        /// Returns -1 if no user is found
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <returns></returns>
         public static int getUserIdFromName(string userName)
         {
             int userId = -1;
@@ -508,6 +512,8 @@ namespace BR.ExtraLib
             return userId;
 
         }
+
+     
 
 
         public static User getUserFromId(int userId)
@@ -566,13 +572,15 @@ namespace BR.ExtraLib
         {
             using (SqlConnection cn = DataAccess.DataAccessFactory.GetDataAccess())
             {
-                string query = "INSERT INTO Users ( UserName,Password,Email) VALUES ('" + userName + "','"+ password + "','" + email+"');";
+                string query = "INSERT INTO Users ( UserName,Password,Email) VALUES ('" + userName + "','"+ Security.EncryptPassword( password) + "','" + email+"');";
                 SqlCommand cmd = new SqlCommand(query, cn);
                 cn.Open();
                 SqlDataReader reader;
                 reader = cmd.ExecuteReader();
             }
         }
+        
+
 
         /// <summary>
         /// 
@@ -584,15 +592,55 @@ namespace BR.ExtraLib
         {
 
             int returnvalue = -1;
+            string encryptedPsw = "";
+
             using (SqlConnection cn = DataAccess.DataAccessFactory.GetDataAccess())
             {
+                string query = "Select Password, UserId FROM Users WHERE UserName='" + userName + "';";
+                SqlCommand cmd = new SqlCommand(query, cn);
+                cn.Open();
+                SqlDataReader reader;
+                reader = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(reader);
 
+
+                if (dt != null)
+                {
+                    if (dt.Rows.Count > 0)
+                    {
+                        if (dt.Rows[0]["Password"] != DBNull.Value)
+                        {
+                            encryptedPsw = Convert.ToString(dt.Rows[0]["Password"]);
+                            if (password.Equals(Security.decryptPassword(encryptedPsw)))
+                            {
+                                returnvalue = Convert.ToInt32(dt.Rows[0]["UserId"]);
+                                 query = "UPDATE Users SET LastLogin=getutcdate() WHERE UserId="+returnvalue;
+                                 cmd = new SqlCommand(query, cn);
+                            
+                                
+                                reader = cmd.ExecuteReader();
+                            }
+
+                        }
+                    }
+
+
+                }
+            }
+
+
+       /*     using (SqlConnection cn = DataAccess.DataAccessFactory.GetDataAccess())
+            {
+                
+
+              
 
 
                 SqlCommand cmd = new SqlCommand("Login", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add(new SqlParameter("@UserName", userName.ToLower())); //Makes username lowercase so it isnt case sensitive. 
-                cmd.Parameters.Add(new SqlParameter("@Password", password));
+                cmd.Parameters.Add(new SqlParameter("@Password", Security.EncryptPassword(password)));
                 cn.Open();
                 SqlDataReader reader;
                 reader = cmd.ExecuteReader();
@@ -613,7 +661,7 @@ namespace BR.ExtraLib
 
                 }
 
-            }
+            } */
             return returnvalue;
         }
 

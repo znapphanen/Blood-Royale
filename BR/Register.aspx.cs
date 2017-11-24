@@ -16,8 +16,17 @@ namespace BR
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            ExtraLib.Sql.createUser(tbUserName.Text.ToString(), tbPassword.Text.ToString(), tbEmail.Text.ToString());
-            Response.Redirect("Login.aspx");
+            if (BR.ExtraLib.Sql.getUserIdFromName(tbUserName.Text.ToString()) > -1)
+            {
+                lblError.Text = "Username allready exist";
+            }
+            else
+            {
+                ExtraLib.Sql.createUser(tbUserName.Text.ToString(), tbPassword.Text.ToString(), tbEmail.Text.ToString());
+                Response.Redirect("Login.aspx");
+            }
+
+            
         }
 
         

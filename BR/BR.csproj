@@ -96,7 +96,6 @@
     <Content Include="SQL\MS-Procedures.sql" />
     <Content Include="SQL\MS-Tables.sql" />
     <Content Include="SQL\MS-Views.sql" />
-    <Content Include="SQL\TestData.sql" />
     <Content Include="StyleSheet.css" />
     <Content Include="UserControls\Nav.ascx" />
     <Content Include="packages.config" />

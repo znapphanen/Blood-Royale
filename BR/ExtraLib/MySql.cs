@@ -617,7 +617,7 @@ namespace BR.ExtraLib
 
 
 
-        //TODO: make enum for country
+     
         public static int getDynastyId(int gameId, char country)
         {
             int returnvalue = -1;

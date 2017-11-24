@@ -117,11 +117,12 @@ namespace UnitTestBr
         public void TestSecurity()
         {
             
-
+            string psw = "Test";
           
-            string encrypted =   BR.ExtraLib.Security.EncryptPassword("Test");
+            string encrypted =   BR.ExtraLib.Security.EncryptPassword(psw);
+
             string decrypted = BR.ExtraLib.Security.decryptPassword(encrypted);
-            string gbbvb = BR.ExtraLib.Sql.getPasskey();
+            Assert.AreEqual(decrypted, psw);
            
         }
 

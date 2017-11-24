@@ -1,7 +1,6 @@
 ﻿USE BR;
 
 
-DROP PROCEDURE Login;
 DROP PROCEDURE CreateGame;
 DROP PROCEDURE  CreateDynasty;
 DROP PROCEDURE  CreateCharacter;
@@ -13,21 +12,7 @@ DROP PROCEDURE GetAllAvailable;
 DROP PROCEDURE DeleteGame;
 GO
 
-CREATE PROCEDURE LOGIN @UserName varchar(15), @Password varchar(64) 
-AS
-BEGIN
-	DECLARE
-	@UserId int = -1
-	
- --	Select UserId INTO @UserId FROM Users WHERE LOWER(UserName) = _UserName AND Password = _Password;   /*collataion on database must be _cs (case sensitive)*/
-	Select  @UserId= UserId  FROM  Users WHERE UserName = @UserName AND Password = @Password;
 
-	if @UserId>0 UPDATE Users SET LastLogin=getutcdate() WHERE UserId=@UserId;
-	
-	Select @UserId AS '@UserId';
-
-END
-GO
 
 
 
