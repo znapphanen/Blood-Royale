@@ -113,6 +113,17 @@ namespace UnitTestBr
             Sql.DeleteGame(gajm.gameId);
         }
 
+        [TestMethod]
+        public void TestSecurity()
+        {
+            
+
+          
+            string encrypted =   BR.ExtraLib.Security.EncryptPassword("Test");
+            string decrypted = BR.ExtraLib.Security.decryptPassword(encrypted);
+            string gbbvb = BR.ExtraLib.Sql.getPasskey();
+           
+        }
 
     }
 }

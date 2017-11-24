@@ -873,5 +873,52 @@ namespace BR.ExtraLib
             return mo;
         }
         #endregion
+
+
+        public static string   getPasskey()
+        {
+            string returnvalue = "";
+
+            using (SqlConnection cn = DataAccess.DataAccessFactory.GetDataAccess())
+            {
+                string query = "SELECT * FROM security;";
+                SqlCommand cmd = new SqlCommand(query, cn);
+                cn.Open();
+                SqlDataReader reader;
+                reader = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+
+                if (dt != null)
+                {
+                    if (dt.Rows.Count > 0)
+                    {
+                        if (dt.Rows[0]["Passkey"] != DBNull.Value)
+                        {
+                            returnvalue = Convert.ToString(dt.Rows[0]["Passkey"]);
+                        }
+                    }
+                }
+                return returnvalue;
+            }
+        }
+
+        public static void setPasskey(string passkey)
+        {
+           
+
+           
+                using (SqlConnection cn = DataAccess.DataAccessFactory.GetDataAccess())
+                {
+                    string query = "INSERT INTO Security ( Passkey) VALUES ('" + passkey + "');";
+                    SqlCommand cmd = new SqlCommand(query, cn);
+                    cn.Open();
+                    SqlDataReader reader;
+                    reader = cmd.ExecuteReader();
+                }
+
+            
+        }
+
     }
 }

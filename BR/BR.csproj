@@ -131,6 +131,7 @@
       <DependentUpon>ContractList.aspx</DependentUpon>
     </Compile>
     <Compile Include="ExtraLib\MySql.cs" />
+    <Compile Include="ExtraLib\Security.cs" />
     <Compile Include="Logout.aspx.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

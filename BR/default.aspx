@@ -40,42 +40,47 @@
             <SelectParameters>
                 <asp:SessionParameter Name="userId" SessionField="LoggedInUserId" Type="Int32" />
             </SelectParameters>
-        </asp:ObjectDataSource>  
-        <asp:Label ID="lblCreateGame" runat="server" Text="Create game" Font-Size="Larger"></asp:Label>
-        <div class="row">
-            <asp:Label ID="Label1" runat="server" Text="Game Name"></asp:Label>
-            <asp:TextBox ID="txtGameName" runat="server"  ></asp:TextBox>
-        </div>    
-        <div class="row">  
+        </asp:ObjectDataSource> 
+        </br>
+
+        <asp:Panel ID="PanelCreateGame" runat="server" BorderColor="Black" BorderWidth="3">
+            <asp:Label ID="lblCreateGame" runat="server" Text="Create game" Font-Size="Larger"></asp:Label>
+            <div class="row">
+                <asp:Label ID="Label1" runat="server" Text="Game Name"></asp:Label>
+                <asp:TextBox ID="txtGameName" runat="server"  ></asp:TextBox>
+            </div>    
+            <div class="row">  
                 
-            <asp:CheckBox ID="cbEngland" runat="server" Text="England" OnCheckedChanged="cbEngland_CheckedChanged" AutoPostBack="true" />
-            <asp:CheckBox ID="cbFrance" runat="server" Text="France" OnCheckedChanged="cbFrance_CheckedChanged" AutoPostBack="true" />
-            <asp:CheckBox ID="cbGermany" runat="server" Text="Germany" OnCheckedChanged="cbGermany_CheckedChanged" AutoPostBack="true" />
-            <asp:CheckBox ID="cbItaly" runat="server" Text="Italy" OnCheckedChanged="cbItaly_CheckedChanged" AutoPostBack="true" />
-            <asp:CheckBox ID="cbSpain" runat="server" Text="Spain" OnCheckedChanged="cbSpain_CheckedChanged" AutoPostBack="true" />
-        </div>
-        <div class="row">
-            <asp:Label ID="lblDynasty" runat="server" Text="Dynasty"></asp:Label>  
-            <asp:DropDownList ID="ddlEngland" runat="server" Visible="false" > </asp:DropDownList>
-            <asp:DropDownList ID="ddlFrance" runat="server" Visible="false"></asp:DropDownList>
-            <asp:DropDownList ID="ddlGermany" runat="server" Visible="false"></asp:DropDownList>
-            <asp:DropDownList ID="ddlItaly" runat="server" Visible="false"></asp:DropDownList>
-            <asp:DropDownList ID="ddlSpain" runat="server" Visible="false"></asp:DropDownList>
-        </div>
+                <asp:CheckBox ID="cbEngland" runat="server" Text="England" OnCheckedChanged="cbEngland_CheckedChanged" AutoPostBack="true" />
+                <asp:CheckBox ID="cbFrance" runat="server" Text="France" OnCheckedChanged="cbFrance_CheckedChanged" AutoPostBack="true" />
+                <asp:CheckBox ID="cbGermany" runat="server" Text="Germany" OnCheckedChanged="cbGermany_CheckedChanged" AutoPostBack="true" />
+                <asp:CheckBox ID="cbItaly" runat="server" Text="Italy" OnCheckedChanged="cbItaly_CheckedChanged" AutoPostBack="true" />
+                <asp:CheckBox ID="cbSpain" runat="server" Text="Spain" OnCheckedChanged="cbSpain_CheckedChanged" AutoPostBack="true" />
+            </div>
+            <div class="row">
+                <asp:Label ID="lblDynasty" runat="server" Text="Dynasty"></asp:Label>  
+                <asp:DropDownList ID="ddlEngland" runat="server" Visible="false" > </asp:DropDownList>
+                <asp:DropDownList ID="ddlFrance" runat="server" Visible="false"></asp:DropDownList>
+                <asp:DropDownList ID="ddlGermany" runat="server" Visible="false"></asp:DropDownList>
+                <asp:DropDownList ID="ddlItaly" runat="server" Visible="false"></asp:DropDownList>
+                <asp:DropDownList ID="ddlSpain" runat="server" Visible="false"></asp:DropDownList>
+            </div>
 
-        <div class="row">
-            <asp:Label ID="lblPlayer" runat="server" Text="Player"></asp:Label>
-            <asp:DropDownList ID="ddlEnglandPlayer" runat="server" Visible="false" > </asp:DropDownList>
-            <asp:DropDownList ID="ddlFrancePlayer" runat="server" Visible="false"></asp:DropDownList>
-            <asp:DropDownList ID="ddlGermanyPlayer" runat="server" Visible="false"></asp:DropDownList>
-            <asp:DropDownList ID="ddlItalyPlayer" runat="server" Visible="false"></asp:DropDownList>
-            <asp:DropDownList ID="ddlSpainPlayer" runat="server" Visible="false"></asp:DropDownList>
-        </div>
+            <div class="row">
+                <asp:Label ID="lblPlayer" runat="server" Text="Player"></asp:Label>
+                <asp:DropDownList ID="ddlEnglandPlayer" runat="server" Visible="false" > </asp:DropDownList>
+                <asp:DropDownList ID="ddlFrancePlayer" runat="server" Visible="false"></asp:DropDownList>
+                <asp:DropDownList ID="ddlGermanyPlayer" runat="server" Visible="false"></asp:DropDownList>
+                <asp:DropDownList ID="ddlItalyPlayer" runat="server" Visible="false"></asp:DropDownList>
+                <asp:DropDownList ID="ddlSpainPlayer" runat="server" Visible="false"></asp:DropDownList>
+            </div>
 
-        <asp:Button ID="btnCreate" runat="server" Text="Create" OnClick="btnCreate_Click" />
-        <div class="row">
-            <asp:Label ID="lblError" runat="server" Text="" Hidden=" true"></asp:Label>
-        </div>
+            <asp:Button ID="btnCreate" runat="server" Text="Create" OnClick="btnCreate_Click" />
+            <div class="row">
+                <asp:Label ID="lblError" runat="server" Text="" Hidden=" true"></asp:Label>
+            </div>
+
+        </asp:Panel>
 
         <asp:ScriptManager ID="ScriptManagerDeleteGame" runat="server"></asp:ScriptManager>
         <ajaxToolkit:ModalPopupExtender ID="ModalPopupExtenderDeleteGame" runat="server" BackgroundCssClass="modalBackground" CancelControlID="btnCancel" TargetControlID="btnToFoolModalPopUp" PopupControlID="PanelDeleteGame"></ajaxToolkit:ModalPopupExtender>

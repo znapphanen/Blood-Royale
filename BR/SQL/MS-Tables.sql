@@ -6,6 +6,7 @@ DROP TABLE IF EXISTS Characters;
 DROP TABLE IF EXISTS Dynasties;
 DROP TABLE IF EXISTS Games;
 DROP TABLE IF EXISTS Users;
+DROP TABLE IF EXISTS Security;
 
 
 CREATE TABLE  Users (
@@ -69,4 +70,9 @@ CREATE TABLE Contracts(
 	PartOne INT NOT NULL FOREIGN KEY REFERENCES Characters (CharacterId),
 	PartTwo	INT NOT NULL FOREIGN KEY REFERENCES Characters (CharacterId),
 	GameId INT NOT NULL FOREIGN KEY  REFERENCES Games (GameId)
+);
+
+CREATE TABLE Security(
+	Passkey varchar(256)
+
 );
