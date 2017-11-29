@@ -42,7 +42,7 @@ CREATE TABLE Characters(
     Str SMALLINT,
     Cha SMALLINT,
     Con SMALLINT,
-	BirthRollesMade TINYINT DEFAULT 0,  
+	BirthRollsMade TINYINT DEFAULT 0,  
 	Gender varchar(1), /*M or F */
 	Born INT,
 	Dead bit DEFAULT 0,

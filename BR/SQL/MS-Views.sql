@@ -16,7 +16,7 @@ CREATE VIEW vCharacters AS
 		c.Born,
 		c.Gender,
 		c.SpouseId,
-		c.BirthRollesMade,
+		c.BirthRollsMade,
 		c.DynastyId,
 		c.King,
 		c.FatherId,

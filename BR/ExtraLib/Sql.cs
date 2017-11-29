@@ -438,7 +438,7 @@ namespace BR.ExtraLib
 
             using (SqlConnection cn = DataAccess.DataAccessFactory.GetDataAccess())
             {
-                string query = "Update Characters SET BirthRollesMade = BirthRollesMade+1 WHERE CharacterId= " + id + ";";
+                string query = "Update Characters SET BirthRollsMade = BirthRollsMade+1 WHERE CharacterId= " + id + ";";
                 SqlCommand cmd = new SqlCommand(query, cn);
                 cn.Open();
                 SqlDataReader reader;
@@ -450,7 +450,7 @@ namespace BR.ExtraLib
         {
             using (SqlConnection cn = DataAccess.DataAccessFactory.GetDataAccess())
             {
-                string query = "Update Characters SET BirthRollesMade = 0 WHERE CharacterId= " + id + ";";
+                string query = "Update Characters SET BirthRollsMade = 0 WHERE CharacterId= " + id + ";";
                 SqlCommand cmd = new SqlCommand(query, cn);
                 cn.Open();
                 SqlDataReader reader;

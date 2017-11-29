@@ -158,9 +158,9 @@ namespace BR.ExtraLib
                 survNbr = 11;
             }
 
-            if (c.BirthRollesMade > 1)
+            if (c.BirthRollsMade > 1)
             {
-                survNbr = survNbr + c.BirthRollesMade - 1;
+                survNbr = survNbr + c.BirthRollsMade - 1;
             }
 
             survNbr = survNbr - c.con;
@@ -177,7 +177,7 @@ namespace BR.ExtraLib
             }
             else
             {
-                if (c.BirthRollesMade > 0)
+                if (c.BirthRollsMade > 0)
                 {
 
                     Sql.resetBirthRolles(characterId);

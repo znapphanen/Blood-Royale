@@ -21,7 +21,7 @@ namespace BR.Model
         private Boolean m_king;
         private int m_born;
         private string m_DynastyName;
-        private int m_BirthRollesMade;
+        private int m_BirthRollsMade;
         private int m_DynastyId;
         private int m_SpouseId;
         private bool m_Dead;
@@ -52,7 +52,7 @@ namespace BR.Model
         } }
         public string dynastyName { get { return m_DynastyName; } }
         public char country { get { return m_Country; } }
-        public int BirthRollesMade { get { return m_BirthRollesMade; } }
+        public int BirthRollsMade { get { return m_BirthRollsMade; } }
         public int DynastyId { get { return m_DynastyId; } }
         public int SpouseId { get { return m_SpouseId; } }
         public Boolean Dead { get { return m_Dead; } }
@@ -104,8 +104,8 @@ namespace BR.Model
                     this.m_DynastyName = (dr["DynastyName"].ToString());
                 if (dr["Country"] != DBNull.Value)
                     this.m_Country = Convert.ToChar(dr["Country"]);
-                if (dr["BirthRollesMade"] != DBNull.Value)
-                    this.m_BirthRollesMade = Convert.ToInt32(dr["BirthRollesMade"]);
+                if (dr["BirthRollsMade"] != DBNull.Value)
+                    this.m_BirthRollsMade = Convert.ToInt32(dr["BirthRollsMade"]);
                 if (dr["DynastyId"] != DBNull.Value)
                     this.m_DynastyId = Convert.ToInt32(dr["DynastyId"]);
                 if (dr["SpouseId"] != DBNull.Value)
