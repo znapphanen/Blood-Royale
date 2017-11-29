@@ -644,7 +644,7 @@
             <asp:Button ID="btnPrison" runat="server" Text="Imprison" OnClick="btnPrison_Click" />
             <asp:Button ID="btnRelease" runat="server" Text="Release" OnClick="btnRelease_Click" />
         </asp:Panel>
-        
+       
     </div>
 
         
@@ -658,7 +658,7 @@
         </ajaxToolkit:ModalPopupExtender>
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
      
-            <asp:Panel ID="PanelHeirs" runat="server" CssClass="modalpopup" BackColor="White">
+        <asp:Panel ID="PanelHeirs" runat="server" CssClass="modalpopup" BackColor="White">
             Possible Heirs<br />
             <asp:GridView ID="gvPossibleHeirs" runat="server" OnRowCommand="gvPossibleHeirs_RowCommand">
                 <Columns>
@@ -673,7 +673,21 @@
           
         </asp:Panel>
 
-       
+
+        <ajaxToolkit:ModalPopupExtender 
+            ID="ModalPopupExtenderNewDynasty" runat="server" 
+            PopupControlID="PanelNewDynasty" 
+            BehaviorID="ModalPopupExtenderNewDynasty" 
+            TargetControlID="btnToFoolModalPopUp" 
+            BackgroundCssClass="modalBackground"  DropShadow="True">
+
+        </ajaxToolkit:ModalPopupExtender>
+
+        <asp:Panel ID="PanelNewDynasty" runat="server" CssClass="modalpopup" BackColor="White">
+            New Dynasty<br/>
+            <asp:DropDownList ID="ddlNewDynasty" runat="server"></asp:DropDownList>
+            <asp:Button ID="btnNewDynasty" runat="server" Text="OK" OnClick="btnNewDynasty_Click" />
+        </asp:Panel>
         
         <asp:Button ID="btnToFoolModalPopUp" runat="server" Text="Button" style = "display:none" /> 
 

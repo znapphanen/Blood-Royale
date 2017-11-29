@@ -23,7 +23,7 @@ BEGIN
 	IF (NOT EXISTS (SELECT GameId FROM Games WHERE GameName = @GameName ))
 		INSERT INTO Games (GameName,Turn,Creator) VALUES (@GameName,-1,@Creator);
         SELECT * FROM Games where GameName = @GameName;
-		/* Testa om det inte går att skapa games med duplicata namn  */
+		
 END
 GO
 

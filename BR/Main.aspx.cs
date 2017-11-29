@@ -206,95 +206,7 @@ namespace BR
             }
         }
 
-        /* att slängas
-        protected void gvEnglandBreeders_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            string commandArg = e.CommandArgument.ToString();
-            string  command = e.CommandName;
-
-            switch (command)
-            { 
-                case "Breed":
-                    
-                    ExtraLib.DynasticSequence.Breed(Convert.ToInt32(commandArg), Convert.ToInt32(Session["Turn"]), Convert.ToInt32(Session["GameId"]) );
-                    this.gvEnglandBreeders.DataBind();
-                    this.gvEnglandNewBorn.DataBind();
-                    break;
-            
-            }
-        }
-
-
-        
-
-        protected void gvFranceBreeders_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            string commandArg = e.CommandArgument.ToString();
-            string command = e.CommandName;
-
-            switch (command)
-            {
-                case "Breed":
-                   
-                    ExtraLib.DynasticSequence.Breed(Convert.ToInt32(commandArg), Convert.ToInt32(Session["Turn"]), Convert.ToInt32(Session["GameId"]));
-                    this.gvFranceBreeders.DataBind();
-                    this.gvFranceNewBorn.DataBind();
-                    break;
-
-            }
-        }
-
-        protected void gvGermanyBreeders_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            string commandArg = e.CommandArgument.ToString();
-            string command = e.CommandName;
-
-            switch (command)
-            {
-                case "Breed":
-                 
-                    ExtraLib.DynasticSequence.Breed(Convert.ToInt32(commandArg), Convert.ToInt32(Session["Turn"]), Convert.ToInt32(Session["GameId"]));
-                    this.gvGermanyBreeders.DataBind();
-                    this.gvGermanyNewBorn.DataBind();
-                    break;
-
-            }
-        }
-
-        protected void gvItalyBreeders_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            string commandArg = e.CommandArgument.ToString();
-            string command = e.CommandName;
-
-            switch (command)
-            {
-                case "Breed":
-                   
-                    ExtraLib.DynasticSequence.Breed(Convert.ToInt32(commandArg), Convert.ToInt32(Session["Turn"]), Convert.ToInt32(Session["GameId"]));
-                    this.gvItalyBreeders.DataBind();
-                    this.gvItalyNewBorn.DataBind();
-                    break;
-
-            }
-        }
-
-        protected void gvSpainBreeders_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            string commandArg = e.CommandArgument.ToString();
-            string command = e.CommandName;
-
-            switch (command)
-            {
-                case "Breed":
-                    
-                    ExtraLib.DynasticSequence.Breed(Convert.ToInt32(commandArg), Convert.ToInt32(Session["Turn"]), Convert.ToInt32(Session["GameId"]));
-                    this.gvSpainBreeders.DataBind();
-                    this.gvSpainNewBorn.DataBind();
-                    break;
-
-            }
-        }
-        */
+      
 
         protected void gv_RowDataBound(object sender, GridViewRowEventArgs e)
         {
@@ -758,14 +670,18 @@ namespace BR
                         refreshAvailableAndProposals();
 
 
-                        //new table MarriageOffers   (so only 1 per c)  check if allready married when accepting and making the offer.  Empty table when changing phase
-                        //new table activeMarriageContracts
+                      
                         break;
                     case 4:
                         ExtraLib.Sql.emptyMarriageOffers(Convert.ToInt32(Session["GameId"]));
                         itsEventPhase();
 
                         this.panelMarriage.Visible = false;
+
+
+                        showNewDynasty();
+
+                        
                         break;
 
                 }
@@ -792,13 +708,78 @@ namespace BR
                 ModalPopupExtenderHeirs.Show();
 
             }
-                
-                
-            
-            
-                
+        }
 
+
+        protected void showNewDynasty()
+        {
+            List<int> dynastyList = BR.ExtraLib.Sql.getDynastyIdsFromGame(Convert.ToInt32(Session["GameId"]));
+
+            foreach (int dynastyId in dynastyList)
+            {
+                int kingId = BR.ExtraLib.Sql.getKingForDynasty(dynastyId);
+                if (kingId == -1) //No king
+                {
+                    String country = BR.ExtraLib.Sql.getCountryFromDynastyId(dynastyId);
+
+                    Session["DynastyToReplace"] = dynastyId;
+                    this.ddlNewDynasty.Items.Clear();
+
+                    switch (country)
+                    {
+                        case "E":
+                            //populate the name suggestions
+                            foreach (string element in BR.ExtraLib.Names.EnglandDynastic)
+                            {
+                                if (ExtraLib.Sql.getDynasty(dynastyId).dynastyName != element)
+                                {
+                                    this.ddlNewDynasty.Items.Add(element);
+                                }
+                                
+                            }
+                            break;
+
+                        case "F":
+
+                            foreach (string element in BR.ExtraLib.Names.FranceDynastic)
+                            {
+                                this.ddlNewDynasty.Items.Add(element);
+                            }
+                            break;
+                        case "G":
+
+
+                            foreach (string element in BR.ExtraLib.Names.GermanyDynastic)
+                            {
+                                this.ddlNewDynasty.Items.Add(element);
+                            }
+                            break;
+                        case "I":
+
+                            foreach (string element in BR.ExtraLib.Names.ItalyDynastic)
+                            {
+                                this.ddlNewDynasty.Items.Add(element);
+                            }
+                            break;
+                        case "S":
+                            foreach (string element in BR.ExtraLib.Names.SpainDynastic)
+                            {
+                                this.ddlNewDynasty.Items.Add(element);
+                            }
+                            break;
+
+
+                    }
+                    ModalPopupExtenderNewDynasty.Show();
+                    break; //start a new dynastyList
+                }
+            }
+           
+
+        
             
+            
+
         }
 
         protected void refreshAvailableAndProposals() 
@@ -884,7 +865,45 @@ namespace BR
             ExtraLib.Sql.crownKing(Convert.ToInt32(e.CommandArgument));
             showPassoverHeir(); //show the next passover, if more than one dynasty king have died.
         }
-       
-       
+
+        protected void btnNewDynasty_Click(object sender, EventArgs e)
+        {
+            int dynastyId = Convert.ToInt32(Session["DynastyToReplace"]);
+            Dynasty theOldDynasty = BR.ExtraLib.Sql.getDynasty(dynastyId);
+
+            int newDynastyId = ExtraLib.Sql.createDynasty(this.ddlNewDynasty.Text.ToString(), theOldDynasty.userId, theOldDynasty.gameId, theOldDynasty.country);
+
+            int kingId = ExtraLib.Sql.CreateCharacter(BR.ExtraLib.Names.getName(theOldDynasty.country, 'M'), 0, 0, 0, 'M', (Convert.ToInt32(Session["Turn"]) - 5) , theOldDynasty.gameId, -1, -1, newDynastyId);
+
+            ExtraLib.Sql.crownKing(kingId);
+            int queenId = ExtraLib.Sql.CreateCharacter(BR.ExtraLib.Names.getName(theOldDynasty.country, 'F'), 0, 0, 0, 'F', (Convert.ToInt32(Session["Turn"]) - 4), theOldDynasty.gameId, -1, -1, newDynastyId);
+            ExtraLib.Sql.marriage(kingId, queenId);
+            char childGender = ExtraLib.Dice.male();
+
+            ExtraLib.Sql.CreateCharacter(BR.ExtraLib.Names.getName(theOldDynasty.country, childGender), ExtraLib.Dice.createStat(), ExtraLib.Dice.createStat(), ExtraLib.Dice.createStat(), childGender, -1, theOldDynasty.gameId, kingId, queenId, newDynastyId);
+
+            ExtraLib.Sql.setDynastyToNoUser(dynastyId);
+
+            switch (theOldDynasty.country)
+            {
+                case 'E':
+                    Session["EnglandDynastyId"] = newDynastyId;
+                    break;
+                case 'F':
+                    Session["FranceDynastyId"] = newDynastyId;
+                    break;
+                case 'G':
+                    Session["GermanyDynastyId"] = newDynastyId;
+                    break;
+                case 'I':
+                    Session["ItalyDynastyId"] = newDynastyId;
+                    break;
+                case 'S':
+                    Session["SpainDynastyId"] = newDynastyId;
+                    break;
+            }
+
+            showNewDynasty(); //if there are other countries without a king
+        }
     }
 }

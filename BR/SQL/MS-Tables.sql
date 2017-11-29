@@ -31,7 +31,7 @@ CREATE TABLE  Dynasties(
 	DynastyId INT NOT NULL Identity(1,1) PRIMARY KEY,
 	DynastyName VARCHAR (15),
 	Country VARCHAR (1),
-	UserId INT NOT NULL FOREIGN KEY REFERENCES Users (UserId),  
+	UserId INT  FOREIGN KEY REFERENCES Users (UserId),  
 	GameId INT NOT NULL FOREIGN KEY REFERENCES Games (GameId)
 );
 

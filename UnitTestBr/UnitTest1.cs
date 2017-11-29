@@ -23,7 +23,7 @@ namespace UnitTestBr
         public void TestFindHeir() 
         {
             
-            Game gajm =  Sql.createGame("TestGame", "2");
+            Game gajm =  Sql.createGame("TestGame", "1");
             int dynastyId = Sql.createDynasty("York","Per",gajm.gameId,'E');
             int kingId = Sql.CreateCharacter("King George",2,-1,0,'M',-5,gajm.gameId,-1,-1,dynastyId);
             int queenId = Sql.CreateCharacter("Queen Hanna", 2, -1, 0, 'F', -4, gajm.gameId, -1, -1, dynastyId);
@@ -50,7 +50,7 @@ namespace UnitTestBr
         public void TestPassoverHeir() 
         {
 
-            Game gajm = Sql.createGame("TestGamePassOverHeir", "2");
+            Game gajm = Sql.createGame("TestGamePassOverHeir", "1");
             int dynastyId = Sql.createDynasty("York", "Per", gajm.gameId, 'E');
             int dynastyId2 = Sql.createDynasty("other", "Per", gajm.gameId, 'S');
             int kingId =  Sql.CreateCharacter("King George", 2, -1, 0, 'M', -25, gajm.gameId, -1, -1, dynastyId);
@@ -102,8 +102,8 @@ namespace UnitTestBr
         public void TestMarry()
         {
 
-            Game gajm = Sql.createGame("TestGame", "2");
-            int dynastyId = Sql.createDynasty("York", "Per", gajm.gameId, 'E');
+            Game gajm = Sql.createGame("TestGame", "1");
+            int dynastyId = Sql.createDynasty("York", "per", gajm.gameId, 'E');
             int kingId = Sql.CreateCharacter("King George", 2, -1, 0, 'M', -5, gajm.gameId, -1, -1, dynastyId);
             int queenId = Sql.CreateCharacter("Queen Hanna", 2, -1, 0, 'F', -4, gajm.gameId, -1, -1, dynastyId);
 
@@ -124,6 +124,21 @@ namespace UnitTestBr
             string decrypted = BR.ExtraLib.Security.decryptPassword(encrypted);
             Assert.AreEqual(decrypted, psw);
            
+        }
+
+
+        [TestMethod]
+        public void TestAliveKing()
+        {
+
+           List<int> dynastyList =  BR.ExtraLib.Sql.getDynastyIdsFromGame(16);
+
+            foreach (int id in dynastyList)
+            {
+               int test= BR.ExtraLib.Sql.getKingForDynasty(id);
+            }
+
+            
         }
 
     }

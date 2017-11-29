@@ -1138,6 +1138,42 @@ namespace BR {
         protected global::System.Web.UI.WebControls.ObjectDataSource odsPossibleHeirs;
         
         /// <summary>
+        /// ModalPopupExtenderNewDynasty control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ModalPopupExtender ModalPopupExtenderNewDynasty;
+        
+        /// <summary>
+        /// PanelNewDynasty control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelNewDynasty;
+        
+        /// <summary>
+        /// ddlNewDynasty control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlNewDynasty;
+        
+        /// <summary>
+        /// btnNewDynasty control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnNewDynasty;
+        
+        /// <summary>
         /// btnToFoolModalPopUp control.
         /// </summary>
         /// <remarks>

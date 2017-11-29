@@ -265,6 +265,39 @@ namespace BR.ExtraLib
         }
 
         /// <summary>
+        /// used for newDynasty
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static string getCountryFromDynastyId(int id) 
+        {
+            string returnvalue = "";
+
+            using (SqlConnection cn = DataAccess.DataAccessFactory.GetDataAccess())
+            {
+                string query = "SELECT Country FROM Dynasties WHERE DynastyId = " + id + ";";
+                SqlCommand cmd = new SqlCommand(query, cn);
+                cn.Open();
+                SqlDataReader reader;
+                reader = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+
+                if (dt != null)
+                {
+                    if (dt.Rows.Count > 0)
+                    {
+
+                        returnvalue = (string)dt.Rows[0]["Country"];
+
+                    }
+                }
+            }
+            return returnvalue;
+        }
+
+
+        /// <summary>
         /// Used for proposal
         /// </summary>
         /// <param name="id"></param>
@@ -330,6 +363,41 @@ namespace BR.ExtraLib
                 SqlDataReader reader;
                 reader = cmd.ExecuteReader();
             }
+        }
+
+
+        // select CharacterId from Characters where DynastyId = 21  AND King = 1 AND Dead = 0;
+        /// <summary>
+        /// returns -1 if no king
+        /// </summary>
+        /// <param name="dynastyId"></param>
+        /// <returns></returns>
+        public static int getKingForDynasty(int dynastyId)
+        {
+            int returnvalue = -1;
+            using (SqlConnection cn = DataAccess.DataAccessFactory.GetDataAccess())
+            {
+
+                string query = "SELECT CharacterId from Characters WHERE  King = 1 AND Dead = 0 AND DynastyId = "  + dynastyId;
+                SqlCommand cmd = new SqlCommand(query, cn);
+                cn.Open();
+                SqlDataReader reader;
+                reader = cmd.ExecuteReader();
+
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+
+                if (dt != null)
+                {
+                    if (dt.Rows.Count > 0)
+                    {
+
+                        returnvalue = (int)dt.Rows[0]["CharacterID"];
+
+                    }
+                }
+            }
+            return returnvalue;
         }
 
         public static int getGameIdForCharacter(int id) 
@@ -475,6 +543,40 @@ namespace BR.ExtraLib
         {
             return "SELECT * FROM Games WHERE GameId= "+ gameId + ";";
         }
+
+        public static List<int> getDynastyIdsFromGame(int gameId)
+        {
+            List<int> returnvalue = new List<int>();
+            using (SqlConnection cn = DataAccess.DataAccessFactory.GetDataAccess())
+            {
+
+                string query = "Select DynastyId FROM Dynasties WHERE UserId IS NOT NULL AND GameId = " + gameId;
+                SqlCommand cmd = new SqlCommand(query, cn);
+                cn.Open();
+                SqlDataReader reader;
+                reader = cmd.ExecuteReader();
+
+                DataTable dt = new DataTable();
+                dt.Load(reader);
+
+                if (dt != null)
+                {
+                    if (dt.Rows.Count > 0)
+                    {
+                       // for(int i=0;i < dt.Rows.Count;i++)
+                       foreach(DataRow row in dt.Rows)
+                        {
+                            returnvalue.Add( (int)row["DynastyId"]);
+                           
+                        }
+                       // returnvalue = (int)dt.Rows[0]["DynastieId"];
+
+                    }
+                }
+            }
+            return returnvalue;
+        }
+
 
         #endregion
 
@@ -671,6 +773,9 @@ namespace BR.ExtraLib
 
 
         #region Dynasty
+
+
+
         /// <summary>
         /// 
         /// </summary>
@@ -681,9 +786,20 @@ namespace BR.ExtraLib
         /// <returns>DynastyId</returns>
         public static int createDynasty(String dynastyName, string userName, int gameId, char country) 
         {
-            int returnvalue=-1;
+            
 
             int userId = getUserIdFromName(userName);
+
+            
+            return  createDynasty(dynastyName, userId, gameId, country);
+        }
+
+        //overLoaded
+        public static int createDynasty(String dynastyName, int userId, int gameId, char country)
+        {
+            int returnvalue = -1;
+
+            
 
             using (SqlConnection cn = DataAccess.DataAccessFactory.GetDataAccess())
             {
@@ -713,8 +829,8 @@ namespace BR.ExtraLib
             return returnvalue;
         }
 
-    
-    
+
+
         //TODO: make enum for country
         public static int getDynastyId(int gameId, char country) {
             int returnvalue = -1;
@@ -806,6 +922,27 @@ namespace BR.ExtraLib
             return d;
 
         }
+        /// <summary>
+        /// Used to set userId to 0. When a new Dynasty is made.
+        /// </summary>
+        /// <param name="dynastyId"></param>
+        public static void setDynastyToNoUser(int dynastyId )
+        {
+
+
+
+            using (SqlConnection cn = DataAccess.DataAccessFactory.GetDataAccess())
+            {
+                string query = "Update Dynasties SET UserId = NULL WHERE DynastyId= " + dynastyId + ";";
+                SqlCommand cmd = new SqlCommand(query, cn);
+                cn.Open();
+                SqlDataReader reader;
+                reader = cmd.ExecuteReader();
+            }
+
+
+        }
+
 
         #endregion
 

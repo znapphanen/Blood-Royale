@@ -232,9 +232,15 @@ namespace BR.ExtraLib
                         }
 
                     }
-                   
-                   
-                   
+                    else
+                    {
+                        Sql.kill(c.SpouseId);  //The queen cant remarry and is out of the game
+                        Sql.kill(c.characterId);
+
+                    }
+
+
+
                 }
                 else
                 {
