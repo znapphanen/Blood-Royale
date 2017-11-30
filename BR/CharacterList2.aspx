@@ -20,23 +20,20 @@
                         <asp:Panel ID="panelEnglandCharacterList" runat="server" Visible=" false">
                             <asp:Image ID="ImageEngland" runat="server" Height="50" Width="100" ImageUrl="~/images/800px-Flag_of_England.svg.png" />
                         
-                            <asp:Label ID="Label1" runat="server" Text="England"></asp:Label>
+                            <asp:Label ID="Label1" runat="server" Text="England" Font-Bold="true" Font-Size="XX-Large"></asp:Label>
                             <div class="table-responsive">
                             <asp:GridView ID="gvEnglandCharacterList" runat="server" AutoGenerateColumns="False" DataSourceID="odsEnglandCharacterList" OnRowCommand ="characterList_RowCommand" OnRowDataBound="characterList_RowDataBound" CssClass="table table-striped">
                             <Columns>
-                                <asp:BoundField DataField="characterId" HeaderText="characterId" ReadOnly="True" SortExpression="characterId" />
-                                <asp:BoundField DataField="firstName" HeaderText="firstName" ReadOnly="True" SortExpression="firstName" />
-                                <asp:BoundField DataField="str" HeaderText="str" ReadOnly="True" SortExpression="str" />
-                                <asp:BoundField DataField="cha" HeaderText="cha" ReadOnly="True" SortExpression="cha" />
-                                <asp:BoundField DataField="con" HeaderText="con" ReadOnly="True" SortExpression="con" />
-                               <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
-                                <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />
-                               
-                                <asp:BoundField DataField="age" HeaderText="age" ReadOnly="True" SortExpression="age" />
-                                <asp:BoundField DataField="dynastyName" HeaderText="dynastyName" ReadOnly="True" SortExpression="dynastyName" />
-
-    
-                                <asp:BoundField DataField="SpouseId" HeaderText="SpouseId" ReadOnly="True" SortExpression="SpouseId" />
+                                <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                                <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                                <asp:BoundField DataField="str" HeaderText="Str" ReadOnly="True" SortExpression="str" />
+                                <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
+                                <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
+                                <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
+                                <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />                               
+                                <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                                <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
+                                <asp:BoundField DataField="SpouseId" HeaderText="Spouse Id" ReadOnly="True" SortExpression="SpouseId" />
                               
                                 <asp:CheckBoxField DataField="Prisoner" HeaderText="Prisoner" ReadOnly="True" SortExpression="Prisoner" />
                                 <asp:TemplateField Visible="true" HeaderText="Change Name">
@@ -65,22 +62,19 @@
             <asp:Panel ID="panelFranceCharacterList" runat="server" Visible=" false">
                  <asp:Image ID="ImageFrance" runat="server" Height="50" Width="100" ImageUrl="~/images/800px-Flag_of_France_(XIV-XVI).svg.png" />
              
-                <asp:Label ID="Label3" runat="server" Text="France"></asp:Label>
+                <asp:Label ID="Label3" runat="server" Text="France" Font-Bold="true" Font-Size="XX-Large"></asp:Label>
                 <asp:GridView ID="gvFranceCharacterList" runat="server" AutoGenerateColumns="False" DataSourceID="odsFranceCharacterList" OnRowCommand ="characterList_RowCommand" OnRowDataBound="characterList_RowDataBound">
                     <Columns>
-                        <asp:BoundField DataField="characterId" HeaderText="characterId" ReadOnly="True" SortExpression="characterId" />
-                        <asp:BoundField DataField="firstName" HeaderText="firstName" ReadOnly="True" SortExpression="firstName" />
-                        <asp:BoundField DataField="str" HeaderText="str" ReadOnly="True" SortExpression="str" />
-                        <asp:BoundField DataField="cha" HeaderText="cha" ReadOnly="True" SortExpression="cha" />
-                        <asp:BoundField DataField="con" HeaderText="con" ReadOnly="True" SortExpression="con" />
-                         <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
-                        <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />
-                      
-                        <asp:BoundField DataField="age" HeaderText="age" ReadOnly="True" SortExpression="age" />
-                        <asp:BoundField DataField="dynastyName" HeaderText="dynastyName" ReadOnly="True" SortExpression="dynastyName" />
-                  
-
-                        <asp:BoundField DataField="SpouseId" HeaderText="SpouseId" ReadOnly="True" SortExpression="SpouseId" />
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="str" HeaderText="Str" ReadOnly="True" SortExpression="str" />
+                        <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
+                        <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />                               
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
+                        <asp:BoundField DataField="SpouseId" HeaderText="Spouse Id" ReadOnly="True" SortExpression="SpouseId" />
                      
                         <asp:CheckBoxField DataField="Prisoner" HeaderText="Prisoner" ReadOnly="True" SortExpression="Prisoner" />
                         <asp:TemplateField Visible="true" HeaderText="Change Name">
@@ -105,21 +99,19 @@
             <asp:Panel ID="panelGermanyCharacterList" runat="server" Visible=" false">
                 <asp:Image ID="ImageGermany" runat="server" Height="50" Width="100" ImageUrl="~/images/Banner_of_Charles_V_as_Holy_Roman_Emperor.svg" />
          
-                <asp:Label ID="Label2" runat="server" Text="Germany"></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text="Germany" Font-Bold="true" Font-Size="XX-Large"></asp:Label>
                 <asp:GridView ID="gvGermanyCharacterList" runat="server" AutoGenerateColumns="False" DataSourceID="odsGermanyCharacterList" OnRowCommand ="characterList_RowCommand" OnRowDataBound="characterList_RowDataBound">
                     <Columns>
-                        <asp:BoundField DataField="characterId" HeaderText="characterId" ReadOnly="True" SortExpression="characterId" />
-                        <asp:BoundField DataField="firstName" HeaderText="firstName" ReadOnly="True" SortExpression="firstName" />
-                        <asp:BoundField DataField="str" HeaderText="str" ReadOnly="True" SortExpression="str" />
-                        <asp:BoundField DataField="cha" HeaderText="cha" ReadOnly="True" SortExpression="cha" />
-                        <asp:BoundField DataField="con" HeaderText="con" ReadOnly="True" SortExpression="con" />
-                        <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
-                        <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />
-                      
-                        <asp:BoundField DataField="age" HeaderText="age" ReadOnly="True" SortExpression="age" />
-                        <asp:BoundField DataField="dynastyName" HeaderText="dynastyName" ReadOnly="True" SortExpression="dynastyName" />
-                       
-                        <asp:BoundField DataField="SpouseId" HeaderText="SpouseId" ReadOnly="True" SortExpression="SpouseId" />
+                                <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                                <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                                <asp:BoundField DataField="str" HeaderText="Str" ReadOnly="True" SortExpression="str" />
+                                <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
+                                <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
+                                <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
+                                <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />                               
+                                <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                                <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
+                                <asp:BoundField DataField="SpouseId" HeaderText="Spouse Id" ReadOnly="True" SortExpression="SpouseId" />
                
                         <asp:CheckBoxField DataField="Prisoner" HeaderText="Prisoner" ReadOnly="True" SortExpression="Prisoner" />
                         <asp:TemplateField Visible="true" HeaderText="Change Name">
@@ -144,22 +136,19 @@
             <asp:Panel ID="panelItalyCharacterList" runat="server" Visible=" false">
                 <asp:Image ID="ImageItaly" runat="server" Height="50" Width="100" ImageUrl="~/images/it_ven3.gif" />
           
-                <asp:Label ID="Label4" runat="server" Text="Italy"></asp:Label>
+                <asp:Label ID="Label4" runat="server" Text="Italy" Font-Bold="true" Font-Size="XX-Large"></asp:Label>
                 <asp:GridView ID="gvItalyCharacterList" runat="server" AutoGenerateColumns="False" DataSourceID="odsItalyCharacterList" OnRowCommand ="characterList_RowCommand" OnRowDataBound="characterList_RowDataBound">
                     <Columns>
-                        <asp:BoundField DataField="characterId" HeaderText="characterId" ReadOnly="True" SortExpression="characterId" />
-                        <asp:BoundField DataField="firstName" HeaderText="firstName" ReadOnly="True" SortExpression="firstName" />
-                        <asp:BoundField DataField="str" HeaderText="str" ReadOnly="True" SortExpression="str" />
-                        <asp:BoundField DataField="cha" HeaderText="cha" ReadOnly="True" SortExpression="cha" />
-                        <asp:BoundField DataField="con" HeaderText="con" ReadOnly="True" SortExpression="con" />
-                        <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />                         
-                        <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />
-                     
-                        <asp:BoundField DataField="age" HeaderText="age" ReadOnly="True" SortExpression="age" />
-                        <asp:BoundField DataField="dynastyName" HeaderText="dynastyName" ReadOnly="True" SortExpression="dynastyName" />
-                      
-
-                        <asp:BoundField DataField="SpouseId" HeaderText="SpouseId" ReadOnly="True" SortExpression="SpouseId" />
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="str" HeaderText="Str" ReadOnly="True" SortExpression="str" />
+                        <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
+                        <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />                               
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
+                        <asp:BoundField DataField="SpouseId" HeaderText="Spouse Id" ReadOnly="True" SortExpression="SpouseId" />
              
                         <asp:CheckBoxField DataField="Prisoner" HeaderText="Prisoner" ReadOnly="True" SortExpression="Prisoner" />
                         <asp:TemplateField Visible="true" HeaderText="Change Name">
@@ -184,21 +173,19 @@
             <asp:Panel ID="panelSpainCharacterList" runat="server" Visible=" false">
                 <asp:Image ID="ImageSpain" runat="server" Height="50" Width="100" ImageUrl="~/images/Flag_of_Cross_of_Burgundy.svg.png" />
              
-                <asp:Label ID="Label5" runat="server" Text="Spain"></asp:Label>
+                <asp:Label ID="Label5" runat="server" Text="Spain" Font-Bold="true" Font-Size="XX-Large"></asp:Label>
                 <asp:GridView ID="gvSpainCharacterList" runat="server" AutoGenerateColumns="False" DataSourceID="odsSpainCharacterList" OnRowCommand ="characterList_RowCommand"  OnRowDataBound="characterList_RowDataBound">
                     <Columns>
-                        <asp:BoundField DataField="characterId" HeaderText="characterId" ReadOnly="True" SortExpression="characterId" />
-                        <asp:BoundField DataField="firstName" HeaderText="firstName" ReadOnly="True" SortExpression="firstName" />
-                        <asp:BoundField DataField="str" HeaderText="str" ReadOnly="True" SortExpression="str" />
-                        <asp:BoundField DataField="cha" HeaderText="cha" ReadOnly="True" SortExpression="cha" />
-                        <asp:BoundField DataField="con" HeaderText="con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="str" HeaderText="Str" ReadOnly="True" SortExpression="str" />
+                        <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
                         <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
-                        <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />
-                   
-                        <asp:BoundField DataField="age" HeaderText="age" ReadOnly="True" SortExpression="age" />
-                        <asp:BoundField DataField="dynastyName" HeaderText="dynastyName" ReadOnly="True" SortExpression="dynastyName" />
-                        
-                        <asp:BoundField DataField="SpouseId" HeaderText="SpouseId" ReadOnly="True" SortExpression="SpouseId" />
+                        <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />                               
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
+                        <asp:BoundField DataField="SpouseId" HeaderText="Spouse Id" ReadOnly="True" SortExpression="SpouseId" />
               
                         <asp:CheckBoxField DataField="Prisoner" HeaderText="Prisoner" ReadOnly="True" SortExpression="Prisoner" />
                         <asp:TemplateField Visible="true" HeaderText="Change Name">

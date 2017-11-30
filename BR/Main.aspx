@@ -32,12 +32,12 @@
                 <asp:Label ID="Label6" runat="server" Text="England"></asp:Label>
                 <asp:GridView ID="gvEnglandBreeders" runat="server" AutoGenerateColumns="False" DataSourceID="odsEnglandBreeders" OnRowCommand ="breeders_RowCommand" OnRowDataBound ="gvBreeders_OnRowDataBound">
                     <Columns>
-                        <asp:BoundField DataField="BirthRollsMade" HeaderText="BirthRollsMade" ReadOnly="True" SortExpression="BirthRollsMade"  />
-                        <asp:BoundField DataField="characterId" HeaderText="characterId" ReadOnly="True" SortExpression="characterId" />
-                        <asp:BoundField DataField="firstName" HeaderText="firstName" ReadOnly="True" SortExpression="firstName" />
-                        <asp:BoundField DataField="dynastyName" HeaderText="dynastyName" ReadOnly="True" SortExpression="dynastyName" />                    
-                        <asp:BoundField DataField="con" HeaderText="con" ReadOnly="True" SortExpression="con" />
-                        <asp:BoundField DataField="age" HeaderText="age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="BirthRollsMade" HeaderText="BirthRolls Made" ReadOnly="True" SortExpression="BirthRollsMade"  />
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />                    
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
                         <asp:TemplateField Visible="true" HeaderText="Breed">
                             <ItemTemplate>
                                 <asp:LinkButton ID="lbBreed" runat="server" Text="Breed" CommandName="Breed" CommandArgument='<%#Eval("characterId") %>' CssClass="btn btn-success btn-xs"></asp:LinkButton>
@@ -57,16 +57,16 @@
                 <asp:Label ID="Label1" runat="server" Text="NewBorns"></asp:Label>
                 <asp:GridView ID="gvEnglandNewBorn" runat="server" AutoGenerateColumns="False" DataSourceID="odsEnglandNewBorn" OnRowDataBound="gv_RowDataBound">
                     <Columns>
-                        <asp:BoundField DataField="characterId" HeaderText="characterId" ReadOnly="True" SortExpression="characterId" />
-                        <asp:BoundField DataField="firstName" HeaderText="firstName" ReadOnly="True" SortExpression="firstName" />
-                        <asp:BoundField DataField="str" HeaderText="str" ReadOnly="True" SortExpression="str" />
-                        <asp:BoundField DataField="cha" HeaderText="cha" ReadOnly="True" SortExpression="cha" />
-                        <asp:BoundField DataField="con" HeaderText="con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="str" HeaderText="Str" ReadOnly="True" SortExpression="str" />
+                        <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
                         
                         <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
-                        <asp:BoundField DataField="born" HeaderText="born" ReadOnly="True" SortExpression="born" />
-                        <asp:BoundField DataField="age" HeaderText="age" ReadOnly="True" SortExpression="age" />
-                        <asp:BoundField DataField="dynastyName" HeaderText="dynastyName" ReadOnly="True" SortExpression="dynastyName" />
+                        <asp:BoundField DataField="born" HeaderText="Born" ReadOnly="True" SortExpression="born" />
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
                     </Columns>
                 </asp:GridView>
                 <asp:ObjectDataSource ID="odsEnglandNewBorn" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="getNewlyBorns" TypeName="BR.Model.CharacterCollection">
@@ -82,12 +82,12 @@
                 <asp:Label ID="Label7" runat="server" Text="France"></asp:Label>
                 <asp:GridView ID="gvFranceBreeders" runat="server" AutoGenerateColumns="False" DataSourceID="odsFranceBreeders" OnRowCommand ="breeders_RowCommand" OnRowDataBound ="gvBreeders_OnRowDataBound">
                     <Columns>
-                        <asp:BoundField DataField="BirthRollsMade" HeaderText="BirthRollsMade" ReadOnly="True" SortExpression="BirthRollsMade"  />
-                        <asp:BoundField DataField="characterId" HeaderText="characterId" ReadOnly="True" SortExpression="characterId" />
-                        <asp:BoundField DataField="firstName" HeaderText="firstName" ReadOnly="True" SortExpression="firstName" />
-                        <asp:BoundField DataField="dynastyName" HeaderText="dynastyName" ReadOnly="True" SortExpression="dynastyName" />                    
-                        <asp:BoundField DataField="con" HeaderText="con" ReadOnly="True" SortExpression="con" />
-                        <asp:BoundField DataField="age" HeaderText="age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="BirthRollsMade" HeaderText="BirthRolls Made" ReadOnly="True" SortExpression="BirthRollsMade"  />
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />                    
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
                         <asp:TemplateField Visible="true" HeaderText="Breed">
                             <ItemTemplate>
                                 <asp:LinkButton ID="lbBreed" runat="server" Text="Breed" CommandName="Breed" CommandArgument='<%#Eval("characterId") %>' CssClass="btn btn-success btn-xs"></asp:LinkButton>
@@ -105,15 +105,16 @@
                 <asp:Label ID="Label2" runat="server" Text="NewBorns"></asp:Label>
                 <asp:GridView ID="gvFranceNewBorn" runat="server" AutoGenerateColumns="False" DataSourceID="odsFranceNewBorn" OnRowDataBound="gv_RowDataBound">
                     <Columns>
-                        <asp:BoundField DataField="characterId" HeaderText="characterId" ReadOnly="True" SortExpression="characterId" />
-                        <asp:BoundField DataField="firstName" HeaderText="firstName" ReadOnly="True" SortExpression="firstName" />
-                        <asp:BoundField DataField="str" HeaderText="str" ReadOnly="True" SortExpression="str" />
-                        <asp:BoundField DataField="cha" HeaderText="cha" ReadOnly="True" SortExpression="cha" />
-                        <asp:BoundField DataField="con" HeaderText="con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="str" HeaderText="Str" ReadOnly="True" SortExpression="str" />
+                        <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
+                        
                         <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
-                        <asp:BoundField DataField="born" HeaderText="born" ReadOnly="True" SortExpression="born" />
-                        <asp:BoundField DataField="age" HeaderText="age" ReadOnly="True" SortExpression="age" />
-                        <asp:BoundField DataField="dynastyName" HeaderText="dynastyName" ReadOnly="True" SortExpression="dynastyName" />
+                        <asp:BoundField DataField="born" HeaderText="Born" ReadOnly="True" SortExpression="born" />
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
                     </Columns>
                 </asp:GridView>
                 <asp:ObjectDataSource ID="odsFranceNewBorn" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="getNewlyBorns" TypeName="BR.Model.CharacterCollection">
@@ -129,12 +130,12 @@
                 <asp:Label ID="Label8" runat="server" Text="Germany"></asp:Label>
                 <asp:GridView ID="gvGermanyBreeders" runat="server" AutoGenerateColumns="False" DataSourceID="odsGermanyBreeders" OnRowCommand ="breeders_RowCommand" OnRowDataBound ="gvBreeders_OnRowDataBound">
                     <Columns>
-                        <asp:BoundField DataField="BirthRollsMade" HeaderText="BirthRollsMade" ReadOnly="True" SortExpression="BirthRollsMade"  />
-                        <asp:BoundField DataField="characterId" HeaderText="characterId" ReadOnly="True" SortExpression="characterId" />
-                        <asp:BoundField DataField="firstName" HeaderText="firstName" ReadOnly="True" SortExpression="firstName" />
-                        <asp:BoundField DataField="dynastyName" HeaderText="dynastyName" ReadOnly="True" SortExpression="dynastyName" />                    
-                        <asp:BoundField DataField="con" HeaderText="con" ReadOnly="True" SortExpression="con" />
-                        <asp:BoundField DataField="age" HeaderText="age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="BirthRollsMade" HeaderText="BirthRolls Made" ReadOnly="True" SortExpression="BirthRollsMade"  />
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />                    
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
                         <asp:TemplateField Visible="true" HeaderText="Breed">
                             <ItemTemplate>
                                 <asp:LinkButton ID="lbBreed" runat="server" Text="Breed" CommandName="Breed" CommandArgument='<%#Eval("characterId") %>' CssClass="btn btn-success btn-xs"></asp:LinkButton>
@@ -152,15 +153,16 @@
                 <asp:Label ID="Label3" runat="server" Text="NewBorns"></asp:Label>
                 <asp:GridView ID="gvGermanyNewBorn" runat="server" AutoGenerateColumns="False" DataSourceID="odsGermanyNewBorn" OnRowDataBound="gv_RowDataBound">
                     <Columns>
-                        <asp:BoundField DataField="characterId" HeaderText="characterId" ReadOnly="True" SortExpression="characterId" />
-                        <asp:BoundField DataField="firstName" HeaderText="firstName" ReadOnly="True" SortExpression="firstName" />
-                        <asp:BoundField DataField="str" HeaderText="str" ReadOnly="True" SortExpression="str" />
-                        <asp:BoundField DataField="cha" HeaderText="cha" ReadOnly="True" SortExpression="cha" />
-                        <asp:BoundField DataField="con" HeaderText="con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="str" HeaderText="Str" ReadOnly="True" SortExpression="str" />
+                        <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
+                        
                         <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
-                        <asp:BoundField DataField="born" HeaderText="born" ReadOnly="True" SortExpression="born" />
-                        <asp:BoundField DataField="age" HeaderText="age" ReadOnly="True" SortExpression="age" />
-                        <asp:BoundField DataField="dynastyName" HeaderText="dynastyName" ReadOnly="True" SortExpression="dynastyName" />
+                        <asp:BoundField DataField="born" HeaderText="Born" ReadOnly="True" SortExpression="born" />
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
                     </Columns>
                 </asp:GridView>
                 <asp:ObjectDataSource ID="odsGermanyNewBorn" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="getNewlyBorns" TypeName="BR.Model.CharacterCollection">
@@ -176,12 +178,12 @@
                 <asp:Label ID="Label9" runat="server" Text="Italy"></asp:Label>
                 <asp:GridView ID="gvItalyBreeders" runat="server" AutoGenerateColumns="False" DataSourceID="odsItalyBreeders" OnRowCommand ="breeders_RowCommand" OnRowDataBound ="gvBreeders_OnRowDataBound">
                     <Columns>
-                        <asp:BoundField DataField="BirthRollsMade" HeaderText="BirthRollsMade" ReadOnly="True" SortExpression="BirthRollsMade"  />
-                        <asp:BoundField DataField="characterId" HeaderText="characterId" ReadOnly="True" SortExpression="characterId" />
-                        <asp:BoundField DataField="firstName" HeaderText="firstName" ReadOnly="True" SortExpression="firstName" />
-                        <asp:BoundField DataField="dynastyName" HeaderText="dynastyName" ReadOnly="True" SortExpression="dynastyName" />                    
-                        <asp:BoundField DataField="con" HeaderText="con" ReadOnly="True" SortExpression="con" />
-                        <asp:BoundField DataField="age" HeaderText="age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="BirthRollsMade" HeaderText="BirthRolls Made" ReadOnly="True" SortExpression="BirthRollsMade"  />
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />                    
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
                         <asp:TemplateField Visible="true" HeaderText="Breed">
                             <ItemTemplate>
                                 <asp:LinkButton ID="lbBreed" runat="server" Text="Breed" CommandName="Breed" CommandArgument='<%#Eval("characterId") %>' CssClass="btn btn-success btn-xs"></asp:LinkButton>
@@ -199,15 +201,15 @@
                 <asp:Label ID="Label4" runat="server" Text="NewBorns"></asp:Label>
                 <asp:GridView ID="gvItalyNewBorn" runat="server" AutoGenerateColumns="False" DataSourceID="odsItalyNewBorn" OnRowDataBound="gv_RowDataBound">
                     <Columns>
-                        <asp:BoundField DataField="characterId" HeaderText="characterId" ReadOnly="True" SortExpression="characterId" />
-                        <asp:BoundField DataField="firstName" HeaderText="firstName" ReadOnly="True" SortExpression="firstName" />
-                        <asp:BoundField DataField="str" HeaderText="str" ReadOnly="True" SortExpression="str" />
-                        <asp:BoundField DataField="cha" HeaderText="cha" ReadOnly="True" SortExpression="cha" />
-                        <asp:BoundField DataField="con" HeaderText="con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="str" HeaderText="Str" ReadOnly="True" SortExpression="str" />
+                        <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />                        
                         <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
-                        <asp:BoundField DataField="born" HeaderText="born" ReadOnly="True" SortExpression="born" />
-                        <asp:BoundField DataField="age" HeaderText="age" ReadOnly="True" SortExpression="age" />
-                        <asp:BoundField DataField="dynastyName" HeaderText="dynastyName" ReadOnly="True" SortExpression="dynastyName" />
+                        <asp:BoundField DataField="born" HeaderText="Born" ReadOnly="True" SortExpression="born" />
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
                     </Columns>
                 </asp:GridView>
                 <asp:ObjectDataSource ID="odsItalyNewBorn" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="getNewlyBorns" TypeName="BR.Model.CharacterCollection">
@@ -223,12 +225,12 @@
                 <asp:Label ID="Label10" runat="server" Text="Spain"></asp:Label>
                 <asp:GridView ID="gvSpainBreeders" runat="server" AutoGenerateColumns="False" DataSourceID="odsSpainBreeders" OnRowCommand ="breeders_RowCommand" OnRowDataBound ="gvBreeders_OnRowDataBound">
                     <Columns>
-                        <asp:BoundField DataField="BirthRollsMade" HeaderText="BirthRollsMade" ReadOnly="True" SortExpression="BirthRollsMade"  />
-                        <asp:BoundField DataField="characterId" HeaderText="characterId" ReadOnly="True" SortExpression="characterId" />
-                        <asp:BoundField DataField="firstName" HeaderText="firstName" ReadOnly="True" SortExpression="firstName" />
-                        <asp:BoundField DataField="dynastyName" HeaderText="dynastyName" ReadOnly="True" SortExpression="dynastyName" />                    
-                        <asp:BoundField DataField="con" HeaderText="con" ReadOnly="True" SortExpression="con" />
-                        <asp:BoundField DataField="age" HeaderText="age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="BirthRollsMade" HeaderText="BirthRolls Made" ReadOnly="True" SortExpression="BirthRollsMade"  />
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />                    
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
                         <asp:TemplateField Visible="true" HeaderText="Breed">
                             <ItemTemplate>
                                 <asp:LinkButton ID="lbBreed" runat="server" Text="Breed" CommandName="Breed" CommandArgument='<%#Eval("characterId") %>' CssClass="btn btn-success btn-xs"></asp:LinkButton>
@@ -246,15 +248,15 @@
                 <asp:Label ID="Label5" runat="server" Text="NewBorns"></asp:Label>
                 <asp:GridView ID="gvSpainNewBorn" runat="server" AutoGenerateColumns="False" DataSourceID="odsSpainNewBorn" OnRowDataBound="gv_RowDataBound">
                     <Columns>
-                        <asp:BoundField DataField="characterId" HeaderText="characterId" ReadOnly="True" SortExpression="characterId" />
-                        <asp:BoundField DataField="firstName" HeaderText="firstName" ReadOnly="True" SortExpression="firstName" />
-                        <asp:BoundField DataField="str" HeaderText="str" ReadOnly="True" SortExpression="str" />
-                        <asp:BoundField DataField="cha" HeaderText="cha" ReadOnly="True" SortExpression="cha" />
-                        <asp:BoundField DataField="con" HeaderText="con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="str" HeaderText="Str" ReadOnly="True" SortExpression="str" />
+                        <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />                      
                         <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
-                        <asp:BoundField DataField="born" HeaderText="born" ReadOnly="True" SortExpression="born" />
-                        <asp:BoundField DataField="age" HeaderText="age" ReadOnly="True" SortExpression="age" />
-                        <asp:BoundField DataField="dynastyName" HeaderText="dynastyName" ReadOnly="True" SortExpression="dynastyName" />
+                        <asp:BoundField DataField="born" HeaderText="Born" ReadOnly="True" SortExpression="born" />
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
                     </Columns>
                 </asp:GridView>
                 <asp:ObjectDataSource ID="odsSpainNewBorn" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="getNewlyBorns" TypeName="BR.Model.CharacterCollection">
@@ -300,15 +302,15 @@
                 <asp:Label ID="Label22" runat="server" Text="All Available For Marriage"></asp:Label>
                 <asp:GridView ID="gvAllAvailable" runat="server" AutoGenerateColumns="False" DataSourceID="odsAllAvailable" OnRowDataBound="gv_RowDataBound">
                     <Columns>
-                        <asp:BoundField DataField="characterId" HeaderText="characterId" ReadOnly="True" SortExpression="characterId" />
-                        <asp:BoundField DataField="firstName" HeaderText="firstName" ReadOnly="True" SortExpression="firstName" />
-                        <asp:BoundField DataField="str" HeaderText="str" ReadOnly="True" SortExpression="str" />
-                        <asp:BoundField DataField="cha" HeaderText="cha" ReadOnly="True" SortExpression="cha" />
-                        <asp:BoundField DataField="con" HeaderText="con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="str" HeaderText="Str" ReadOnly="True" SortExpression="str" />
+                        <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
                         <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
                         <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />
-                        <asp:BoundField DataField="age" HeaderText="age" ReadOnly="True" SortExpression="age" />
-                        <asp:BoundField DataField="dynastyName" HeaderText="dynastyName" ReadOnly="True" SortExpression="dynastyName" />
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
                      </Columns>
                 </asp:GridView>
                 <asp:ObjectDataSource ID="odsAllAvailable" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="getAllAvailable" TypeName="BR.Model.CharacterCollection">
@@ -324,15 +326,15 @@
                 <asp:Label ID="Label17" runat="server" Text="England Available For Marriage"></asp:Label>
                 <asp:GridView ID="gvEnglandAvailable" runat="server" AutoGenerateColumns="False" DataSourceID="odsEnglandAvailable" OnRowCommand ="gvEnglandMarriage_RowCommand" OnRowDataBound="gv_RowDataBound">
                     <Columns>
-                        <asp:BoundField DataField="characterId" HeaderText="characterId" ReadOnly="True" SortExpression="characterId" />
-                        <asp:BoundField DataField="firstName" HeaderText="firstName" ReadOnly="True" SortExpression="firstName" />
-                        <asp:BoundField DataField="str" HeaderText="str" ReadOnly="True" SortExpression="str" />
-                        <asp:BoundField DataField="cha" HeaderText="cha" ReadOnly="True" SortExpression="cha" />
-                        <asp:BoundField DataField="con" HeaderText="con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="str" HeaderText="Str" ReadOnly="True" SortExpression="str" />
+                        <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
                         <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
                         <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />
-                        <asp:BoundField DataField="age" HeaderText="age" ReadOnly="True" SortExpression="age" />
-                        <asp:BoundField DataField="dynastyName" HeaderText="dynastyName" ReadOnly="True" SortExpression="dynastyName" />
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
                        
                     <asp:TemplateField Visible="true" HeaderText="Marriage proposal">
                             <ItemTemplate>
@@ -354,13 +356,10 @@
 
                 <asp:Label ID="lblEngProps" runat="server" Text="Available proposals for England"></asp:Label>
                 <asp:GridView ID="gvEnglandProposals" runat="server" AutoGenerateColumns="False" DataSourceID="odsEnglandProposals" OnRowCommand="gvEnglandProposals_RowCommand">
-                    <Columns>
-                        <asp:BoundField DataField="marriageOfferId" HeaderText="marriageOfferId" ReadOnly="True" SortExpression="marriageOfferId" />
-                        <asp:BoundField DataField="offererId" HeaderText="offererId" ReadOnly="True" SortExpression="offererId" />
-                        <asp:BoundField DataField="targetId" HeaderText="targetId" ReadOnly="True" SortExpression="targetId" />
-                        <asp:BoundField DataField="offererDynasty" HeaderText="offererDynasty" ReadOnly="True" SortExpression="offererDynasty" />
-                        <asp:BoundField DataField="targetDynasty" HeaderText="targetDynasty" ReadOnly="True" SortExpression="targetDynasty" />
-                        <asp:BoundField DataField="contractText" HeaderText="contractText" ReadOnly="True" SortExpression="contractText" />
+                    <Columns>                      
+                        <asp:BoundField DataField="offererId" HeaderText="Offerer Id" ReadOnly="True" SortExpression="offererId" />
+                        <asp:BoundField DataField="targetId" HeaderText="Target Id" ReadOnly="True" SortExpression="targetId" />
+                        <asp:BoundField DataField="contractText" HeaderText="Contract" ReadOnly="True" SortExpression="contractText" />
                         <asp:TemplateField Visible="true" HeaderText="Accept proposal">
                             <ItemTemplate>
                                 <asp:LinkButton ID="lbAccept" runat="server" Text="Accept" CommandName="Accept" CommandArgument='<%#Eval("marriageOfferId")  %>' CssClass="btn btn-success btn-xs"></asp:LinkButton>
@@ -387,15 +386,15 @@
                 <asp:Label ID="Label18" runat="server" Text="France Available For Marriage"></asp:Label>
                 <asp:GridView ID="gvFranceAvailable" runat="server" DataSourceID="odsFranceAvailable" AutoGenerateColumns="False" OnRowCommand ="gvFranceMarriage_RowCommand" OnRowDataBound="gv_RowDataBound">
                     <Columns>
-                        <asp:BoundField DataField="characterId" HeaderText="characterId" ReadOnly="True" SortExpression="characterId" />
-                        <asp:BoundField DataField="firstName" HeaderText="firstName" ReadOnly="True" SortExpression="firstName" />
-                        <asp:BoundField DataField="str" HeaderText="str" ReadOnly="True" SortExpression="str" />
-                        <asp:BoundField DataField="cha" HeaderText="cha" ReadOnly="True" SortExpression="cha" />
-                        <asp:BoundField DataField="con" HeaderText="con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="str" HeaderText="Str" ReadOnly="True" SortExpression="str" />
+                        <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
                         <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
                         <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />
-                        <asp:BoundField DataField="age" HeaderText="age" ReadOnly="True" SortExpression="age" />
-                        <asp:BoundField DataField="dynastyName" HeaderText="dynastyName" ReadOnly="True" SortExpression="dynastyName" />
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
                        
                     <asp:TemplateField Visible="true" HeaderText="Marriage proposal">
                             <ItemTemplate>
@@ -418,12 +417,9 @@
                 <asp:Label ID="lblFranceProps" runat="server" Text="Available proposals for France"></asp:Label>
                 <asp:GridView ID="gvFranceProposals" runat="server" AutoGenerateColumns="False" DataSourceID="odsFranceProposals" OnRowCommand="gvFranceProposals_RowCommand">
                     <Columns>
-                        <asp:BoundField DataField="marriageOfferId" HeaderText="marriageOfferId" ReadOnly="True" SortExpression="marriageOfferId" />
-                        <asp:BoundField DataField="offererId" HeaderText="offererId" ReadOnly="True" SortExpression="offererId" />
-                        <asp:BoundField DataField="targetId" HeaderText="targetId" ReadOnly="True" SortExpression="targetId" />
-                        <asp:BoundField DataField="offererDynasty" HeaderText="offererDynasty" ReadOnly="True" SortExpression="offererDynasty" />
-                        <asp:BoundField DataField="targetDynasty" HeaderText="targetDynasty" ReadOnly="True" SortExpression="targetDynasty" />
-                        <asp:BoundField DataField="contractText" HeaderText="contractText" ReadOnly="True" SortExpression="contractText" />
+                        <asp:BoundField DataField="offererId" HeaderText="Offerer Id" ReadOnly="True" SortExpression="offererId" />
+                        <asp:BoundField DataField="targetId" HeaderText="Target Id" ReadOnly="True" SortExpression="targetId" />
+                        <asp:BoundField DataField="contractText" HeaderText="Contract" ReadOnly="True" SortExpression="contractText" />
                         <asp:TemplateField Visible="true" HeaderText="Accept proposal">
                             <ItemTemplate>
                                 <asp:LinkButton ID="lbAccept" runat="server" Text="Accept" CommandName="Accept" CommandArgument='<%#Eval("marriageOfferId")  %>' CssClass="btn btn-success btn-xs"></asp:LinkButton>
@@ -450,15 +446,15 @@
                 <asp:Label ID="Label19" runat="server" Text="Germany Available For Marriage"></asp:Label>
                 <asp:GridView ID="gvGermanyAvailable" runat="server" DataSourceID="odsGermanyAvailable" AutoGenerateColumns="False" OnRowCommand ="gvGermanyMarriage_RowCommand" OnRowDataBound="gv_RowDataBound">
                     <Columns>
-                        <asp:BoundField DataField="characterId" HeaderText="characterId" ReadOnly="True" SortExpression="characterId" />
-                        <asp:BoundField DataField="firstName" HeaderText="firstName" ReadOnly="True" SortExpression="firstName" />
-                        <asp:BoundField DataField="str" HeaderText="str" ReadOnly="True" SortExpression="str" />
-                        <asp:BoundField DataField="cha" HeaderText="cha" ReadOnly="True" SortExpression="cha" />
-                        <asp:BoundField DataField="con" HeaderText="con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="str" HeaderText="Str" ReadOnly="True" SortExpression="str" />
+                        <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
                         <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
                         <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />
-                        <asp:BoundField DataField="age" HeaderText="age" ReadOnly="True" SortExpression="age" />
-                        <asp:BoundField DataField="dynastyName" HeaderText="dynastyName" ReadOnly="True" SortExpression="dynastyName" />
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
                        
                     <asp:TemplateField Visible="true" HeaderText="Marriage proposal">
                             <ItemTemplate>
@@ -481,12 +477,9 @@
                 <asp:Label ID="lblGermanyProps" runat="server" Text="Available proposals for Germany"></asp:Label>
                 <asp:GridView ID="gvGermanyProposals" runat="server" AutoGenerateColumns="False" DataSourceID="odsGermanyProposals" OnRowCommand="gvGermanyProposals_RowCommand">
                     <Columns>
-                        <asp:BoundField DataField="marriageOfferId" HeaderText="marriageOfferId" ReadOnly="True" SortExpression="marriageOfferId" />
-                        <asp:BoundField DataField="offererId" HeaderText="offererId" ReadOnly="True" SortExpression="offererId" />
-                        <asp:BoundField DataField="targetId" HeaderText="targetId" ReadOnly="True" SortExpression="targetId" />
-                        <asp:BoundField DataField="offererDynasty" HeaderText="offererDynasty" ReadOnly="True" SortExpression="offererDynasty" />
-                        <asp:BoundField DataField="targetDynasty" HeaderText="targetDynasty" ReadOnly="True" SortExpression="targetDynasty" />
-                        <asp:BoundField DataField="contractText" HeaderText="contractText" ReadOnly="True" SortExpression="contractText" />
+                        <asp:BoundField DataField="offererId" HeaderText="Offerer Id" ReadOnly="True" SortExpression="offererId" />
+                        <asp:BoundField DataField="targetId" HeaderText="Target Id" ReadOnly="True" SortExpression="targetId" />
+                        <asp:BoundField DataField="contractText" HeaderText="Contract" ReadOnly="True" SortExpression="contractText" />
                         <asp:TemplateField Visible="true" HeaderText="Accept proposal">
                             <ItemTemplate>
                                 <asp:LinkButton ID="lbAccept" runat="server" Text="Accept" CommandName="Accept" CommandArgument='<%#Eval("marriageOfferId")  %>' CssClass="btn btn-success btn-xs"></asp:LinkButton>
@@ -513,15 +506,15 @@
                 <asp:Label ID="Label20" runat="server" Text="Italy Available For Marriage"></asp:Label>
                 <asp:GridView ID="gvItalyAvailable" runat="server" DataSourceID="odsItalyAvailable" AutoGenerateColumns="False" OnRowCommand ="gvItalyMarriage_RowCommand" OnRowDataBound="gv_RowDataBound">
                     <Columns>
-                        <asp:BoundField DataField="characterId" HeaderText="characterId" ReadOnly="True" SortExpression="characterId" />
-                        <asp:BoundField DataField="firstName" HeaderText="firstName" ReadOnly="True" SortExpression="firstName" />
-                        <asp:BoundField DataField="str" HeaderText="str" ReadOnly="True" SortExpression="str" />
-                        <asp:BoundField DataField="cha" HeaderText="cha" ReadOnly="True" SortExpression="cha" />
-                        <asp:BoundField DataField="con" HeaderText="con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="str" HeaderText="Str" ReadOnly="True" SortExpression="str" />
+                        <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
                         <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
                         <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />
-                        <asp:BoundField DataField="age" HeaderText="age" ReadOnly="True" SortExpression="age" />
-                        <asp:BoundField DataField="dynastyName" HeaderText="dynastyName" ReadOnly="True" SortExpression="dynastyName" />
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
                        
                     <asp:TemplateField Visible="true" HeaderText="Marriage proposal">
                             <ItemTemplate>
@@ -544,12 +537,9 @@
                 <asp:Label ID="lblItalyProps" runat="server" Text="Available proposals for Italy"></asp:Label>
                 <asp:GridView ID="gvItalyProposals" runat="server" AutoGenerateColumns="False" DataSourceID="odsItalyProposals" OnRowCommand="gvItalyProposals_RowCommand">
                     <Columns>
-                        <asp:BoundField DataField="marriageOfferId" HeaderText="marriageOfferId" ReadOnly="True" SortExpression="marriageOfferId" />
-                        <asp:BoundField DataField="offererId" HeaderText="offererId" ReadOnly="True" SortExpression="offererId" />
-                        <asp:BoundField DataField="targetId" HeaderText="targetId" ReadOnly="True" SortExpression="targetId" />
-                        <asp:BoundField DataField="offererDynasty" HeaderText="offererDynasty" ReadOnly="True" SortExpression="offererDynasty" />
-                        <asp:BoundField DataField="targetDynasty" HeaderText="targetDynasty" ReadOnly="True" SortExpression="targetDynasty" />
-                        <asp:BoundField DataField="contractText" HeaderText="contractText" ReadOnly="True" SortExpression="contractText" />
+                        <asp:BoundField DataField="offererId" HeaderText="Offerer Id" ReadOnly="True" SortExpression="offererId" />
+                        <asp:BoundField DataField="targetId" HeaderText="Target Id" ReadOnly="True" SortExpression="targetId" />
+                        <asp:BoundField DataField="contractText" HeaderText="Contract" ReadOnly="True" SortExpression="contractText" />
                         <asp:TemplateField Visible="true" HeaderText="Accept proposal">
                             <ItemTemplate>
                                 <asp:LinkButton ID="lbAccept" runat="server" Text="Accept" CommandName="Accept" CommandArgument='<%#Eval("marriageOfferId")  %>' CssClass="btn btn-success btn-xs"></asp:LinkButton>
@@ -576,15 +566,15 @@
                 <asp:Label ID="Label21" runat="server" Text="Spain Available For Marriage"></asp:Label>
                 <asp:GridView ID="gvSpainAvailable" runat="server" DataSourceID="odsSpainAvailable" AutoGenerateColumns="False" OnRowCommand ="gvSpainMarriage_RowCommand" OnRowDataBound="gv_RowDataBound">
                     <Columns>
-                        <asp:BoundField DataField="characterId" HeaderText="characterId" ReadOnly="True" SortExpression="characterId" />
-                        <asp:BoundField DataField="firstName" HeaderText="firstName" ReadOnly="True" SortExpression="firstName" />
-                        <asp:BoundField DataField="str" HeaderText="str" ReadOnly="True" SortExpression="str" />
-                        <asp:BoundField DataField="cha" HeaderText="cha" ReadOnly="True" SortExpression="cha" />
-                        <asp:BoundField DataField="con" HeaderText="con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="str" HeaderText="Str" ReadOnly="True" SortExpression="str" />
+                        <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
                         <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
                         <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />
-                        <asp:BoundField DataField="age" HeaderText="age" ReadOnly="True" SortExpression="age" />
-                        <asp:BoundField DataField="dynastyName" HeaderText="dynastyName" ReadOnly="True" SortExpression="dynastyName" />
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
                        
                     <asp:TemplateField Visible="true" HeaderText="Marriage proposal">
                             <ItemTemplate>
@@ -607,12 +597,9 @@
                 <asp:Label ID="lblSpainProps" runat="server" Text="Available proposals for Spain"></asp:Label>
                 <asp:GridView ID="gvSpainProposals" runat="server" AutoGenerateColumns="False" DataSourceID="odsSpainProposals" OnRowCommand="gvSpainProposals_RowCommand">
                     <Columns>
-                        <asp:BoundField DataField="marriageOfferId" HeaderText="marriageOfferId" ReadOnly="True" SortExpression="marriageOfferId" />
-                        <asp:BoundField DataField="offererId" HeaderText="offererId" ReadOnly="True" SortExpression="offererId" />
-                        <asp:BoundField DataField="targetId" HeaderText="targetId" ReadOnly="True" SortExpression="targetId" />
-                        <asp:BoundField DataField="offererDynasty" HeaderText="offererDynasty" ReadOnly="True" SortExpression="offererDynasty" />
-                        <asp:BoundField DataField="targetDynasty" HeaderText="targetDynasty" ReadOnly="True" SortExpression="targetDynasty" />
-                        <asp:BoundField DataField="contractText" HeaderText="contractText" ReadOnly="True" SortExpression="contractText" />
+                        <asp:BoundField DataField="offererId" HeaderText="Offerer Id" ReadOnly="True" SortExpression="offererId" />
+                        <asp:BoundField DataField="targetId" HeaderText="Target Id" ReadOnly="True" SortExpression="targetId" />
+                        <asp:BoundField DataField="contractText" HeaderText="Contract" ReadOnly="True" SortExpression="contractText" />
                         <asp:TemplateField Visible="true" HeaderText="Accept proposal">
                             <ItemTemplate>
                                 <asp:LinkButton ID="lbAccept" runat="server" Text="Accept" CommandName="Accept" CommandArgument='<%#Eval("marriageOfferId")  %>' CssClass="btn btn-success btn-xs"></asp:LinkButton>

@@ -16,15 +16,16 @@
                             <div class="table-responsive">
                                 <asp:GridView ID="gvEnglandContractList" runat="server" AutoGenerateColumns="False" DataSourceID="odsEnglandContractList">
                                     <Columns>
-                                        <asp:BoundField DataField="contractText" HeaderText="contractText" ReadOnly="True" SortExpression="contractText" />
-                                        <asp:BoundField DataField="nameOne" HeaderText="nameOne" ReadOnly="True" SortExpression="nameOne" />
-                                        <asp:BoundField DataField="idOne" HeaderText="idOne" ReadOnly="True" SortExpression="idOne" />
-                                        <asp:BoundField DataField="dynastynameOne" HeaderText="dynastynameOne" ReadOnly="True" SortExpression="dynastynameOne" />
-                                        <asp:BoundField DataField="dynastyIdOne" HeaderText="dynastyIdOne" ReadOnly="True" SortExpression="dynastyIdOne" />
-                                        <asp:BoundField DataField="nameTwo" HeaderText="nameTwo" ReadOnly="True" SortExpression="nameTwo" />
-                                        <asp:BoundField DataField="idTwo" HeaderText="idTwo" ReadOnly="True" SortExpression="idTwo" />
-                                        <asp:BoundField DataField="dynastynameTwo" HeaderText="dynastynameTwo" ReadOnly="True" SortExpression="dynastynameTwo" />
-                                        <asp:BoundField DataField="dynastyIdTwo" HeaderText="dynastyIdTwo" ReadOnly="True" SortExpression="dynastyIdTwo" />
+                                        <asp:BoundField DataField="contractText" HeaderText="Contract" ReadOnly="True" SortExpression="contractText" />
+                                         <asp:BoundField DataField="idOne" HeaderText="Id" ReadOnly="True" SortExpression="idOne" />
+                                        <asp:BoundField DataField="nameOne" HeaderText="Name" ReadOnly="True" SortExpression="nameOne" />
+                                       
+                                        <asp:BoundField DataField="dynastynameOne" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastynameOne" />
+                                        <asp:BoundField DataField="idTwo" HeaderText="Id" ReadOnly="True" SortExpression="idTwo" />
+                                        <asp:BoundField DataField="nameTwo" HeaderText="Name" ReadOnly="True" SortExpression="nameTwo" />
+                                        
+                                        <asp:BoundField DataField="dynastynameTwo" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastynameTwo" />
+                                      
                                     </Columns>
                                 </asp:GridView>
                             </div>
@@ -41,15 +42,15 @@
                             <div class="table-responsive">
                                 <asp:GridView ID="gvFranceContractList" runat="server" AutoGenerateColumns="False" DataSourceID="odsFranceContractList">
                                     <Columns>
-                                        <asp:BoundField DataField="contractText" HeaderText="contractText" ReadOnly="True" SortExpression="contractText" />
-                                        <asp:BoundField DataField="nameOne" HeaderText="nameOne" ReadOnly="True" SortExpression="nameOne" />
-                                        <asp:BoundField DataField="idOne" HeaderText="idOne" ReadOnly="True" SortExpression="idOne" />
-                                        <asp:BoundField DataField="dynastynameOne" HeaderText="dynastynameOne" ReadOnly="True" SortExpression="dynastynameOne" />
-                                        <asp:BoundField DataField="dynastyIdOne" HeaderText="dynastyIdOne" ReadOnly="True" SortExpression="dynastyIdOne" />
-                                        <asp:BoundField DataField="nameTwo" HeaderText="nameTwo" ReadOnly="True" SortExpression="nameTwo" />
-                                        <asp:BoundField DataField="idTwo" HeaderText="idTwo" ReadOnly="True" SortExpression="idTwo" />
-                                        <asp:BoundField DataField="dynastynameTwo" HeaderText="dynastynameTwo" ReadOnly="True" SortExpression="dynastynameTwo" />
-                                        <asp:BoundField DataField="dynastyIdTwo" HeaderText="dynastyIdTwo" ReadOnly="True" SortExpression="dynastyIdTwo" />
+                                        <asp:BoundField DataField="contractText" HeaderText="Contract" ReadOnly="True" SortExpression="contractText" />
+                                         <asp:BoundField DataField="idOne" HeaderText="Id" ReadOnly="True" SortExpression="idOne" />
+                                        <asp:BoundField DataField="nameOne" HeaderText="Name" ReadOnly="True" SortExpression="nameOne" />
+                                       
+                                        <asp:BoundField DataField="dynastynameOne" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastynameOne" />
+                                        <asp:BoundField DataField="idTwo" HeaderText="Id" ReadOnly="True" SortExpression="idTwo" />
+                                        <asp:BoundField DataField="nameTwo" HeaderText="Name" ReadOnly="True" SortExpression="nameTwo" />
+                                        
+                                        <asp:BoundField DataField="dynastynameTwo" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastynameTwo" />
                                     </Columns>
                                 </asp:GridView>
                             </div>
@@ -66,15 +67,15 @@
                             <div class="table-responsive">
                                 <asp:GridView ID="gvGermanyContractList" runat="server" AutoGenerateColumns="False" DataSourceID="odsGermanyContractList">
                                     <Columns>
-                                        <asp:BoundField DataField="contractText" HeaderText="contractText" ReadOnly="True" SortExpression="contractText" />
-                                        <asp:BoundField DataField="nameOne" HeaderText="nameOne" ReadOnly="True" SortExpression="nameOne" />
-                                        <asp:BoundField DataField="idOne" HeaderText="idOne" ReadOnly="True" SortExpression="idOne" />
-                                        <asp:BoundField DataField="dynastynameOne" HeaderText="dynastynameOne" ReadOnly="True" SortExpression="dynastynameOne" />
-                                        <asp:BoundField DataField="dynastyIdOne" HeaderText="dynastyIdOne" ReadOnly="True" SortExpression="dynastyIdOne" />
-                                        <asp:BoundField DataField="nameTwo" HeaderText="nameTwo" ReadOnly="True" SortExpression="nameTwo" />
-                                        <asp:BoundField DataField="idTwo" HeaderText="idTwo" ReadOnly="True" SortExpression="idTwo" />
-                                        <asp:BoundField DataField="dynastynameTwo" HeaderText="dynastynameTwo" ReadOnly="True" SortExpression="dynastynameTwo" />
-                                        <asp:BoundField DataField="dynastyIdTwo" HeaderText="dynastyIdTwo" ReadOnly="True" SortExpression="dynastyIdTwo" />
+                                        <asp:BoundField DataField="contractText" HeaderText="Contract" ReadOnly="True" SortExpression="contractText" />
+                                         <asp:BoundField DataField="idOne" HeaderText="Id" ReadOnly="True" SortExpression="idOne" />
+                                        <asp:BoundField DataField="nameOne" HeaderText="Name" ReadOnly="True" SortExpression="nameOne" />
+                                       
+                                        <asp:BoundField DataField="dynastynameOne" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastynameOne" />
+                                        <asp:BoundField DataField="idTwo" HeaderText="Id" ReadOnly="True" SortExpression="idTwo" />
+                                        <asp:BoundField DataField="nameTwo" HeaderText="Name" ReadOnly="True" SortExpression="nameTwo" />
+                                        
+                                        <asp:BoundField DataField="dynastynameTwo" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastynameTwo" />
                                     </Columns>
                                 </asp:GridView>
                             </div>
@@ -92,15 +93,15 @@
                             <div class="table-responsive">
                                 <asp:GridView ID="gvItalyContractList" runat="server" AutoGenerateColumns="False" DataSourceID="odsItalyContractList">
                                     <Columns>
-                                        <asp:BoundField DataField="contractText" HeaderText="contractText" ReadOnly="True" SortExpression="contractText" />
-                                        <asp:BoundField DataField="nameOne" HeaderText="nameOne" ReadOnly="True" SortExpression="nameOne" />
-                                        <asp:BoundField DataField="idOne" HeaderText="idOne" ReadOnly="True" SortExpression="idOne" />
-                                        <asp:BoundField DataField="dynastynameOne" HeaderText="dynastynameOne" ReadOnly="True" SortExpression="dynastynameOne" />
-                                        <asp:BoundField DataField="dynastyIdOne" HeaderText="dynastyIdOne" ReadOnly="True" SortExpression="dynastyIdOne" />
-                                        <asp:BoundField DataField="nameTwo" HeaderText="nameTwo" ReadOnly="True" SortExpression="nameTwo" />
-                                        <asp:BoundField DataField="idTwo" HeaderText="idTwo" ReadOnly="True" SortExpression="idTwo" />
-                                        <asp:BoundField DataField="dynastynameTwo" HeaderText="dynastynameTwo" ReadOnly="True" SortExpression="dynastynameTwo" />
-                                        <asp:BoundField DataField="dynastyIdTwo" HeaderText="dynastyIdTwo" ReadOnly="True" SortExpression="dynastyIdTwo" />
+                                          <asp:BoundField DataField="contractText" HeaderText="Contract" ReadOnly="True" SortExpression="contractText" />
+                                         <asp:BoundField DataField="idOne" HeaderText="Id" ReadOnly="True" SortExpression="idOne" />
+                                        <asp:BoundField DataField="nameOne" HeaderText="Name" ReadOnly="True" SortExpression="nameOne" />
+                                       
+                                        <asp:BoundField DataField="dynastynameOne" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastynameOne" />
+                                        <asp:BoundField DataField="idTwo" HeaderText="Id" ReadOnly="True" SortExpression="idTwo" />
+                                        <asp:BoundField DataField="nameTwo" HeaderText="Name" ReadOnly="True" SortExpression="nameTwo" />
+                                        
+                                        <asp:BoundField DataField="dynastynameTwo" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastynameTwo" />
                                     </Columns>
                                 </asp:GridView>
                             </div>
@@ -118,15 +119,15 @@
                             <div class="table-responsive">
                                 <asp:GridView ID="gvSpainContractList" runat="server" AutoGenerateColumns="False" DataSourceID="odsSpainContractList">
                                     <Columns>
-                                        <asp:BoundField DataField="contractText" HeaderText="contractText" ReadOnly="True" SortExpression="contractText" />
-                                        <asp:BoundField DataField="nameOne" HeaderText="nameOne" ReadOnly="True" SortExpression="nameOne" />
-                                        <asp:BoundField DataField="idOne" HeaderText="idOne" ReadOnly="True" SortExpression="idOne" />
-                                        <asp:BoundField DataField="dynastynameOne" HeaderText="dynastynameOne" ReadOnly="True" SortExpression="dynastynameOne" />
-                                        <asp:BoundField DataField="dynastyIdOne" HeaderText="dynastyIdOne" ReadOnly="True" SortExpression="dynastyIdOne" />
-                                        <asp:BoundField DataField="nameTwo" HeaderText="nameTwo" ReadOnly="True" SortExpression="nameTwo" />
-                                        <asp:BoundField DataField="idTwo" HeaderText="idTwo" ReadOnly="True" SortExpression="idTwo" />
-                                        <asp:BoundField DataField="dynastynameTwo" HeaderText="dynastynameTwo" ReadOnly="True" SortExpression="dynastynameTwo" />
-                                        <asp:BoundField DataField="dynastyIdTwo" HeaderText="dynastyIdTwo" ReadOnly="True" SortExpression="dynastyIdTwo" />
+                                         <asp:BoundField DataField="contractText" HeaderText="Contract" ReadOnly="True" SortExpression="contractText" />
+                                         <asp:BoundField DataField="idOne" HeaderText="Id" ReadOnly="True" SortExpression="idOne" />
+                                        <asp:BoundField DataField="nameOne" HeaderText="Name" ReadOnly="True" SortExpression="nameOne" />
+                                       
+                                        <asp:BoundField DataField="dynastynameOne" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastynameOne" />
+                                        <asp:BoundField DataField="idTwo" HeaderText="Id" ReadOnly="True" SortExpression="idTwo" />
+                                        <asp:BoundField DataField="nameTwo" HeaderText="Name" ReadOnly="True" SortExpression="nameTwo" />
+                                        
+                                        <asp:BoundField DataField="dynastynameTwo" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastynameTwo" />
                                     </Columns>
                                 </asp:GridView>
                             </div>
