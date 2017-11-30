@@ -52,6 +52,7 @@
                     <SelectParameters>
                         <asp:SessionParameter DefaultValue="" Name="gameId" SessionField="GameId" Type="Int32" />
                         <asp:SessionParameter DefaultValue="" Name="dynastyId" SessionField="EnglandDynastyId" Type="Int32" />
+                        <asp:SessionParameter DefaultValue="" Name="turn" SessionField="Turn" Type="Int32" />
                     </SelectParameters>
                 </asp:ObjectDataSource>
                 <asp:Label ID="Label1" runat="server" Text="NewBorns"></asp:Label>
@@ -64,8 +65,7 @@
                         <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
                         
                         <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
-                        <asp:BoundField DataField="born" HeaderText="Born" ReadOnly="True" SortExpression="born" />
-                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                       
                         <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
                     </Columns>
                 </asp:GridView>
@@ -100,6 +100,7 @@
                     <SelectParameters>
                         <asp:SessionParameter DefaultValue="" Name="gameId" SessionField="GameId" Type="Int32" />
                         <asp:SessionParameter DefaultValue="" Name="dynastyId" SessionField="FranceDynastyId" Type="Int32" />
+                        <asp:SessionParameter DefaultValue="" Name="turn" SessionField="Turn" Type="Int32" />
                     </SelectParameters>
                 </asp:ObjectDataSource>
                 <asp:Label ID="Label2" runat="server" Text="NewBorns"></asp:Label>
@@ -112,8 +113,7 @@
                         <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
                         
                         <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
-                        <asp:BoundField DataField="born" HeaderText="Born" ReadOnly="True" SortExpression="born" />
-                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                        
                         <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
                     </Columns>
                 </asp:GridView>
@@ -148,6 +148,7 @@
                     <SelectParameters>
                         <asp:SessionParameter DefaultValue="" Name="gameId" SessionField="GameId" Type="Int32" />
                         <asp:SessionParameter DefaultValue="" Name="dynastyId" SessionField="GermanyDynastyId" Type="Int32" />
+                        <asp:SessionParameter DefaultValue="" Name="turn" SessionField="Turn" Type="Int32" />
                     </SelectParameters>
                 </asp:ObjectDataSource>
                 <asp:Label ID="Label3" runat="server" Text="NewBorns"></asp:Label>
@@ -160,8 +161,7 @@
                         <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
                         
                         <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
-                        <asp:BoundField DataField="born" HeaderText="Born" ReadOnly="True" SortExpression="born" />
-                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                        
                         <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
                     </Columns>
                 </asp:GridView>
@@ -196,6 +196,7 @@
                     <SelectParameters>
                         <asp:SessionParameter DefaultValue="" Name="gameId" SessionField="GameId" Type="Int32" />
                         <asp:SessionParameter DefaultValue="" Name="dynastyId" SessionField="ItalyDynastyId" Type="Int32" />
+                        <asp:SessionParameter DefaultValue="" Name="turn" SessionField="Turn" Type="Int32" />
                     </SelectParameters>
                 </asp:ObjectDataSource>
                 <asp:Label ID="Label4" runat="server" Text="NewBorns"></asp:Label>
@@ -207,8 +208,7 @@
                         <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
                         <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />                        
                         <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
-                        <asp:BoundField DataField="born" HeaderText="Born" ReadOnly="True" SortExpression="born" />
-                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                        
                         <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
                     </Columns>
                 </asp:GridView>
@@ -243,6 +243,7 @@
                     <SelectParameters>
                         <asp:SessionParameter DefaultValue="" Name="gameId" SessionField="GameId" Type="Int32" />
                         <asp:SessionParameter DefaultValue="" Name="dynastyId" SessionField="SpainDynastyId" Type="Int32" />
+                        <asp:SessionParameter DefaultValue="" Name="turn" SessionField="Turn" Type="Int32" />
                     </SelectParameters>
                 </asp:ObjectDataSource>
                 <asp:Label ID="Label5" runat="server" Text="NewBorns"></asp:Label>
@@ -254,8 +255,7 @@
                         <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
                         <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />                      
                         <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
-                        <asp:BoundField DataField="born" HeaderText="Born" ReadOnly="True" SortExpression="born" />
-                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                       
                         <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
                     </Columns>
                 </asp:GridView>

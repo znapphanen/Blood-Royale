@@ -79,6 +79,8 @@ namespace BR.Model
 
         }
 
+        
+
         /// <summary>
         /// If dynastyId is 0 or less it gets from all Dynasties
         /// </summary>
@@ -86,7 +88,7 @@ namespace BR.Model
         /// <param name="dynastyId"></param>
         /// <returns></returns>
         [DataObjectMethod(DataObjectMethodType.Select)]
-        public static CharacterCollection getBreedingCharacters(int gameId, int dynastyId) {
+        public static CharacterCollection getBreedingCharacters(int gameId, int dynastyId, int turn) {
             CharacterCollection cc = new CharacterCollection();
 
             using (SqlConnection cn = DataAccess.DataAccessFactory.GetDataAccess())
@@ -106,7 +108,12 @@ namespace BR.Model
                 {
                     foreach (DataRow dr in dt.Rows)
                     {
-                        cc.Add(new Character(dr));
+                        // the procedure cant be any longer . So I  do the filtering here for "age 50 yrs and younger"
+                        if (Convert.ToInt32(dr["Born"])  > turn - 11)
+                        {
+                            cc.Add(new Character(dr));
+                        }
+                       
                     }
                 }
 

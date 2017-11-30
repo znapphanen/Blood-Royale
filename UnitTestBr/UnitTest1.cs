@@ -47,6 +47,27 @@ namespace UnitTestBr
         }
 
         [TestMethod]
+        public void TestGetBreeding()
+        {
+
+            Game gajm = Sql.createGame("TestGame", "1");
+            int dynastyId = Sql.createDynasty("York", "Per", gajm.gameId, 'E');
+            int kingId = Sql.CreateCharacter("King George", 2, -1, 0, 'M', -15, gajm.gameId, -1, -1, dynastyId);
+            int queenId = Sql.CreateCharacter("Queen Hanna", 2, -1, 0, 'F', -14, gajm.gameId, -1, -1, dynastyId);
+            BR.ExtraLib.Sql.marriage(kingId, queenId);
+
+            int luke = Sql.CreateCharacter("Prince Luke1", 2, -1, 0, 'M', -5, gajm.gameId, kingId, queenId, dynastyId);
+           
+            int wife = Sql.CreateCharacter("wife", 2, -1, 0, 'F', -10, gajm.gameId, kingId, -1, dynastyId);
+            BR.ExtraLib.Sql.marriage(luke, wife);
+
+            CharacterCollection.getBreedingCharacters(gajm.gameId,dynastyId,0);
+
+            Sql.DeleteGame(gajm.gameId);
+        }
+
+
+        [TestMethod]
         public void TestPassoverHeir() 
         {
 

@@ -101,6 +101,7 @@
     <Content Include="packages.config" />
     <Content Include="Master.Master" />
     <None Include="Properties\PublishProfiles\BR-web.pubxml" />
+    <None Include="Properties\PublishProfiles\Somee.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

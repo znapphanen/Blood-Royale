@@ -95,7 +95,7 @@ namespace BR.ExtraLib
 
         public static void BreedAll(int gameId, int turn)
         {
-            Model.CharacterCollection cc = Model.CharacterCollection.getBreedingCharacters(gameId, -1);
+            Model.CharacterCollection cc = Model.CharacterCollection.getBreedingCharacters(gameId, -1, turn);
 
             foreach (Character c in cc)
             {
