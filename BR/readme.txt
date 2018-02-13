@@ -5,3 +5,8 @@ If you get error TF30063 when adding in the Nuget. Connect the project in the Te
 
 Added ajax toolkit to the toolbox, choose item- browse.
 
+
+******
+To publish to the site  use Build - publish.
+To commit to git Team explorer - "house" - changes - then sync
+

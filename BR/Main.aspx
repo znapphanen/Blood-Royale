@@ -277,29 +277,98 @@
             <asp:Panel ID="panelEnglandSurvival" runat="server" Height="276px" Visible =" false">
                 <asp:Image ID="ImageEnglandSurvuval" runat="server" Height="50" Width="100" ImageUrl="~/images/800px-Flag_of_England.svg.png" />
                 <asp:Label ID="Label11" runat="server" Text="Englands New Deaths"></asp:Label>
-                <asp:GridView ID="gvEnglandNewDeath" runat="server"></asp:GridView>
+                <asp:GridView ID="gvEnglandNewDeath" runat="server" AutoGenerateColumns="False">
+                    <Columns>
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="str" HeaderText="Str" ReadOnly="True" SortExpression="str" />
+                        <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
+                        <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
+                        <asp:BoundField DataField="SpouseId" HeaderText="Spouse Id" ReadOnly="True" SortExpression="SpouseId" />
+                     </Columns>
+
+                </asp:GridView>
             </asp:Panel>
 
             <asp:Panel ID="panelFranceSurvival" runat="server" Height="276px" Visible =" false">
                     <asp:Image ID="ImageFranceSurvival" runat="server" Height="50" Width="100" ImageUrl="~/images/800px-Flag_of_France_(XIV-XVI).svg.png" />
                 <asp:Label ID="Label12" runat="server" Text="France New Deaths"></asp:Label>
-                <asp:GridView ID="gvFranceNewDeath" runat="server"></asp:GridView>
+                <asp:GridView ID="gvFranceNewDeath" runat="server" AutoGenerateColumns="False">
+                    <Columns>
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="str" HeaderText="Str" ReadOnly="True" SortExpression="str" />
+                        <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
+                        <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
+                        <asp:BoundField DataField="SpouseId" HeaderText="Spouse Id" ReadOnly="True" SortExpression="SpouseId" />
+                     </Columns>
+
+                </asp:GridView>
             </asp:Panel>
 
             <asp:Panel ID="panelGermanySurvival" runat="server" Height="276px" Visible =" false">
                 <asp:Image ID="ImageGermanySyrvival" runat="server" Height="50" Width="100" ImageUrl="~/images/Banner_of_Charles_V_as_Holy_Roman_Emperor.svg" />
                 <asp:Label ID="Label13" runat="server" Text="Germany New Deaths"></asp:Label>
-                <asp:GridView ID="gvGermanyNewDeath" runat="server"></asp:GridView>
+                <asp:GridView ID="gvGermanyNewDeath" runat="server" AutoGenerateColumns="False">
+                    <Columns>
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="str" HeaderText="Str" ReadOnly="True" SortExpression="str" />
+                        <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
+                        <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
+                        <asp:BoundField DataField="SpouseId" HeaderText="Spouse Id" ReadOnly="True" SortExpression="SpouseId" />
+                     </Columns>
+
+                </asp:GridView>
             </asp:Panel>
             <asp:Panel ID="panelItalySurvival" runat="server" Height="276px" Visible =" false">
                 <asp:Image ID="ImageItalySurvival" runat="server" ImageUrl="~/images/it_ven3.gif" Height="50" Width="100" />
                 <asp:Label ID="Label14" runat="server" Text="Italy New Deaths"></asp:Label>
-                <asp:GridView ID="gvItalyNewDeath" runat="server"></asp:GridView>
+                <asp:GridView ID="gvItalyNewDeath" runat="server" AutoGenerateColumns="False">
+                    <Columns>
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="str" HeaderText="Str" ReadOnly="True" SortExpression="str" />
+                        <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
+                        <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
+                        <asp:BoundField DataField="SpouseId" HeaderText="Spouse Id" ReadOnly="True" SortExpression="SpouseId" />
+                     </Columns>
+
+                </asp:GridView>
             </asp:Panel>
             <asp:Panel ID="panelSpainSurvival" runat="server" Height="276px" Visible =" false">
                 <asp:Image ID="ImageSpainSurvival" runat="server" ImageUrl="~/images/Flag_of_Cross_of_Burgundy.svg.png" Height="50" Width="100" />
                 <asp:Label ID="Label15" runat="server" Text="Spain New Deaths"></asp:Label>
-                <asp:GridView ID="gvSpainNewDeath" runat="server"></asp:GridView>
+                <asp:GridView ID="gvSpainNewDeath" runat="server"  AutoGenerateColumns="False">
+                    <Columns>
+                        <asp:BoundField DataField="characterId" HeaderText="Id" ReadOnly="True" SortExpression="characterId" />
+                        <asp:BoundField DataField="firstName" HeaderText="Name" ReadOnly="True" SortExpression="firstName" />
+                        <asp:BoundField DataField="str" HeaderText="Str" ReadOnly="True" SortExpression="str" />
+                        <asp:BoundField DataField="cha" HeaderText="Cha" ReadOnly="True" SortExpression="cha" />
+                        <asp:BoundField DataField="con" HeaderText="Con" ReadOnly="True" SortExpression="con" />
+                        <asp:BoundField DataField="Gender" HeaderText="Gender" ReadOnly="True" SortExpression="Gender" />
+                        <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />
+                        <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
+                        <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
+                        <asp:BoundField DataField="SpouseId" HeaderText="Spouse Id" ReadOnly="True" SortExpression="SpouseId" />
+                     </Columns>
+                </asp:GridView>
             </asp:Panel>
             </br>
             </br>
