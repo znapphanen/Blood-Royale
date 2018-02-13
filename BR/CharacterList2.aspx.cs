@@ -81,6 +81,41 @@ namespace BR
 
         }
 
+        protected void showSpouse(int spouseId)
+        {
+            BR.Model.Character spouse = BR.ExtraLib.Sql.getCharacter(spouseId);
+            if (spouse != null)
+            {
+                lblSpouseInfo.Text = spouse.firstName + " " + spouse.dynastyName + " " + spouse.age;
+
+                switch (spouse.country)
+                {
+                    case 'E':
+                        imgSpouseFlag.ImageUrl = "~/images/800px-Flag_of_England.svg.png";
+                        break;
+                    case 'F':
+                        imgSpouseFlag.ImageUrl = "~/images/800px-Flag_of_France_(XIV-XVI).svg.png";
+                        break;
+                    case 'G':
+                        imgSpouseFlag.ImageUrl = "~/images/Banner_of_Charles_V_as_Holy_Roman_Emperor.svg";
+                        break;
+                    case 'I':
+                        imgSpouseFlag.ImageUrl = "~/images/it_ven3.gif";
+                        break;
+                    case 'S':
+                        imgSpouseFlag.ImageUrl = "~/images/Flag_of_Cross_of_Burgundy.svg.png";
+                        break;
+                }
+
+                ModalPopupExtenderSpouse.Show();
+
+            }
+           
+
+        }
+        
+        
+
       
 
 
@@ -89,17 +124,23 @@ namespace BR
         {
 
             string command = e.CommandName;
+            int commandArg = Convert.ToInt32( e.CommandArgument);
 
             switch (command)
             {
                 case "ChangeName":
                     changeName(sender, e);
-
-
+                    break;
+                case "showSpouse":
+                    showSpouse(commandArg);
                     break;
 
             }
         }
+
+
+
+
 
     }
 }

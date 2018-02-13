@@ -12,6 +12,8 @@
     <uc1:Nav ID="Nav1" runat="server" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+   
     
      <asp:Panel ID="panelCharacterList" runat="server">
             <div class="container-fluid">
@@ -33,7 +35,11 @@
                                 <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />                               
                                 <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
                                 <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
-                                <asp:BoundField DataField="SpouseId" HeaderText="Spouse Id" ReadOnly="True" SortExpression="SpouseId" />
+                                <asp:TemplateField Visible="true" HeaderText="Spouse Id">
+                            <ItemTemplate>
+                                <asp:LinkButton ID="spouseidbtn" runat="server" Text='<%#Eval("spouseId")  %>' CommandName="showSpouse" CommandArgument='<%#Eval("spouseId")  %>' CssClass="btn btn-success btn-xs"></asp:LinkButton>
+                            </ItemTemplate>                          
+                        </asp:TemplateField>
                               
                                 <asp:CheckBoxField DataField="Prisoner" HeaderText="Prisoner" ReadOnly="True" SortExpression="Prisoner" />
                                 <asp:TemplateField Visible="true" HeaderText="Change Name">
@@ -74,7 +80,11 @@
                         <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />                               
                         <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
                         <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
-                        <asp:BoundField DataField="SpouseId" HeaderText="Spouse Id" ReadOnly="True" SortExpression="SpouseId" />
+                        <asp:TemplateField Visible="true" HeaderText="Spouse Id">
+                            <ItemTemplate>
+                                <asp:LinkButton ID="spouseidbtn" runat="server" Text='<%#Eval("spouseId")  %>' CommandName="showSpouse" CommandArgument='<%#Eval("spouseId")  %>' CssClass="btn btn-success btn-xs"></asp:LinkButton>
+                            </ItemTemplate>                          
+                        </asp:TemplateField>
                      
                         <asp:CheckBoxField DataField="Prisoner" HeaderText="Prisoner" ReadOnly="True" SortExpression="Prisoner" />
                         <asp:TemplateField Visible="true" HeaderText="Change Name">
@@ -111,7 +121,11 @@
                                 <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />                               
                                 <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
                                 <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
-                                <asp:BoundField DataField="SpouseId" HeaderText="Spouse Id" ReadOnly="True" SortExpression="SpouseId" />
+                                <asp:TemplateField Visible="true" HeaderText="Spouse Id">
+                            <ItemTemplate>
+                                <asp:LinkButton ID="spouseidbtn" runat="server" Text='<%#Eval("spouseId")  %>' CommandName="showSpouse" CommandArgument='<%#Eval("spouseId")  %>' CssClass="btn btn-success btn-xs"></asp:LinkButton>
+                            </ItemTemplate>                          
+                        </asp:TemplateField>
                
                         <asp:CheckBoxField DataField="Prisoner" HeaderText="Prisoner" ReadOnly="True" SortExpression="Prisoner" />
                         <asp:TemplateField Visible="true" HeaderText="Change Name">
@@ -148,7 +162,11 @@
                         <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />                               
                         <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
                         <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
-                        <asp:BoundField DataField="SpouseId" HeaderText="Spouse Id" ReadOnly="True" SortExpression="SpouseId" />
+                        <asp:TemplateField Visible="true" HeaderText="Spouse Id">
+                            <ItemTemplate>
+                                <asp:LinkButton ID="spouseidbtn" runat="server" Text='<%#Eval("spouseId")  %>' CommandName="showSpouse" CommandArgument='<%#Eval("spouseId")  %>' CssClass="btn btn-success btn-xs"></asp:LinkButton>
+                            </ItemTemplate>                          
+                        </asp:TemplateField>
              
                         <asp:CheckBoxField DataField="Prisoner" HeaderText="Prisoner" ReadOnly="True" SortExpression="Prisoner" />
                         <asp:TemplateField Visible="true" HeaderText="Change Name">
@@ -185,8 +203,14 @@
                         <asp:CheckBoxField DataField="King" HeaderText="King" ReadOnly="True" SortExpression="King" />                               
                         <asp:BoundField DataField="age" HeaderText="Age" ReadOnly="True" SortExpression="age" />
                         <asp:BoundField DataField="dynastyName" HeaderText="Dynasty" ReadOnly="True" SortExpression="dynastyName" />
-                        <asp:BoundField DataField="SpouseId" HeaderText="Spouse Id" ReadOnly="True" SortExpression="SpouseId" />
+                        
               
+                        <asp:TemplateField Visible="true" HeaderText="Spouse Id">
+                            <ItemTemplate>
+                                <asp:LinkButton ID="spouseidbtn" runat="server" Text='<%#Eval("spouseId")  %>' CommandName="showSpouse" CommandArgument='<%#Eval("spouseId")  %>' CssClass="btn btn-success btn-xs"></asp:LinkButton>
+                            </ItemTemplate>                          
+                        </asp:TemplateField>
+
                         <asp:CheckBoxField DataField="Prisoner" HeaderText="Prisoner" ReadOnly="True" SortExpression="Prisoner" />
                         <asp:TemplateField Visible="true" HeaderText="Change Name">
                             <ItemTemplate>
@@ -209,6 +233,22 @@
          <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
              
         </asp:Panel>
+    <ajaxToolkit:ModalPopupExtender 
+            ID="ModalPopupExtenderSpouse" runat="server" 
+            PopupControlID="panelSpouse" 
+            BehaviorID="ModalPopupExtenderSpouse" 
+            TargetControlID="btnToFoolModalPopUp" 
+            BackgroundCssClass="modalBackground"  
+            CancelControlID="btn_Cancel"        
+            DropShadow="True">
+
+        </ajaxToolkit:ModalPopupExtender>
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <asp:Button ID="btnToFoolModalPopUp" runat="server" Text="Button" style = "display:none" /> 
+    <asp:Panel ID="panelSpouse" runat="server" CssClass="modalpopup" BackColor="White">
+        <asp:Image ID="imgSpouseFlag"  Height="10" Width="20" runat="server" /><asp:Label ID="lblSpouseInfo" runat="server" Text=""></asp:Label>
+        <asp:Button ID="btn_Cancel" runat="server" Text="Ok" />
+    </asp:Panel>
+
    
-    
 </asp:Content>
