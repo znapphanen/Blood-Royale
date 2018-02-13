@@ -77,7 +77,37 @@ END
 GO
 
 
+CREATE PROCEDURE GetBreedingCharacters
+	@GameId INT, /*GameId needed so we can get from all Dynasties*/
+	@DynastyId INT /*If -1 get from all Dynasties*/
 
+AS
+BEGIN
+DECLARE @ddl NVARCHAR(900)
+		
+	Set @ddl ='SELECT * FROM vCharacters WHERE Dead=0 AND King IS NULL AND SpouseId IN (SELECT CharacterId FROM Characters where Dead=0 AND Prisoner=0 AND SpouseId IS NOT NULL AND GameId = @gid AND Gender=''M'''
+	
+	IF (@DynastyId> 0)
+	BEGIN
+		SET @ddl = CONCAT(@ddl,' AND DynastyId = @did')
+	END
+	SET @ddl = CONCAT(@ddl,')')
+
+	SET @ddl = CONCAT(@ddl,' UNION SELECT * FROM vCharacters WHERE Dead=0 AND King=1 AND Gender= ''F'' ')
+	
+	IF (@DynastyId> 0)
+	BEGIN
+		SET @ddl = CONCAT(@ddl,' AND DynastyId = @did')
+	END
+	SET @ddl = CONCAT(@ddl,' AND SpouseId IN (SELECT CharacterId FROM Characters where Dead=0 AND Prisoner=0  AND SpouseId IS NOT NULL AND GameId = @gid) ')
+	 
+
+
+	
+	EXEC sp_executesql @ddl, N'@gid INT, @did INT', @gid = @GameId, @did = @DynastyId
+END
+
+/*
 
 CREATE PROCEDURE GetBreedingCharacters
 	@GameId INT, /*GameId needed so we can get from all Dynasties*/
@@ -93,9 +123,13 @@ DECLARE @ddl NVARCHAR(200)
 	BEGIN
 		SET @ddl = CONCAT(@ddl,' AND DynastyId = @did')
 	END
+
+
+
 	SET @ddl = CONCAT(@ddl,')')
 	EXEC sp_executesql @ddl, N'@gid INT, @did INT', @gid = @GameId, @did = @DynastyId
 END
+*/
 GO
 
 

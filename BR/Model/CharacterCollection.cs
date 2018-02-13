@@ -108,10 +108,13 @@ namespace BR.Model
                 {
                     foreach (DataRow dr in dt.Rows)
                     {
-                        // the procedure cant be any longer . So I  do the filtering here for "age 50 yrs and younger"
+                        //Could be in the procedure but its simpler to add it here.  So I  do the filtering here for "age 50 yrs and younger"  
                         if (Convert.ToInt32(dr["Born"])  > turn - 11)
                         {
-                            cc.Add(new Character(dr));
+                            
+                                cc.Add(new Character(dr));
+                            
+                            
                         }
                        
                     }

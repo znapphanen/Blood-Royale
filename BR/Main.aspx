@@ -10,8 +10,9 @@
     <title></title>
     <script src="jquery-3.2.1.js"></script>
 </head>
-<body>
-    <form id="form1" runat="server">
+<body >
+    <form id="form1" runat="server" >
+        
     <div>
         <uc1:Nav ID="Nav1" runat="server" />
         <asp:Panel ID="panelDynasticSequence" runat="server" Height="276px" Visible ="false">
@@ -266,6 +267,11 @@
                     </SelectParameters>
                 </asp:ObjectDataSource>
             </asp:Panel>
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
         </asp:Panel>
         <asp:Panel ID="panelSurvival" runat="server" Height="276px" Visible =" false">
             <asp:Panel ID="panelEnglandSurvival" runat="server" Height="276px" Visible =" false">
@@ -295,6 +301,11 @@
                 <asp:Label ID="Label15" runat="server" Text="Spain New Deaths"></asp:Label>
                 <asp:GridView ID="gvSpainNewDeath" runat="server"></asp:GridView>
             </asp:Panel>
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
         </asp:Panel>
         <asp:Panel ID="panelMarriage"  runat="server" Height="276px" Visible =" false">
 
@@ -619,7 +630,12 @@
                     </SelectParameters>
                 </asp:ObjectDataSource>
             </asp:Panel>
-
+        
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
         </asp:Panel>
 
 
@@ -631,9 +647,9 @@
             <asp:Button ID="btnPrison" runat="server" Text="Imprison" OnClick="btnPrison_Click" />
             <asp:Button ID="btnRelease" runat="server" Text="Release" OnClick="btnRelease_Click" />
         </asp:Panel>
-       
+      
     </div>
-
+      
         
         <ajaxToolkit:ModalPopupExtender 
             ID="ModalPopupExtenderHeirs" runat="server" 
@@ -679,8 +695,10 @@
         <asp:Button ID="btnToFoolModalPopUp" runat="server" Text="Button" style = "display:none" /> 
 
         <asp:Label ID="lblError" runat="server" ForeColor="Black" Hidden="true"></asp:Label>
+      
+       
     </form>
-
+    
     <script type="text/javascript">
         $(document).ready(function () {
             $("tr:odd").css("background-color", "lightgrey");
@@ -701,4 +719,5 @@
 
     <script src="JavaScript1.js"></script>
 </body>
+    
 </html>

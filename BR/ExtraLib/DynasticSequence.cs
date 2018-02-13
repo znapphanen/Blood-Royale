@@ -14,10 +14,21 @@ namespace BR.ExtraLib
             {
                 char gender = Dice.male();
                 string name = "";
+                Character mother = Sql.getCharacter(motherId);
                 Character father = Sql.getSpouse(motherId);
-                Model.Dynasty fd = Sql.getDynasty(father.DynastyId);
+                Model.Dynasty parentDynasty;
 
-                switch (fd.country)
+                if (!father.King && mother.King) //when mother is ruler and father is not a king, child goes to mother dynasty
+                {
+                    parentDynasty = Sql.getDynasty(mother.DynastyId);
+                }
+                else
+                {
+                    parentDynasty = Sql.getDynasty(father.DynastyId);
+                }
+                
+
+                switch (parentDynasty.country)
                 {
                     case 'E':
                         if (gender=='M')
@@ -87,7 +98,7 @@ namespace BR.ExtraLib
 
 
 
-                ExtraLib.Sql.CreateCharacter(name, Dice.createStat(), Dice.createStat(), Dice.createStat(), gender, turn, gameId, father.characterId, motherId, father.DynastyId);
+                ExtraLib.Sql.CreateCharacter(name, Dice.createStat(), Dice.createStat(), Dice.createStat(), gender, turn, gameId, father.characterId, motherId, parentDynasty.dynastyId);
             }
             ExtraLib.Sql.increaseBirthRolles(motherId);
 

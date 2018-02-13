@@ -55,6 +55,8 @@ namespace BR
         protected void Page_Load(object sender, EventArgs e)
         {
 
+         
+
             if (!this.IsPostBack) //so page_load dosn't trigger when pressing a button
             {
                 if (Session["LoggedInUserId"] == null)
@@ -873,6 +875,7 @@ namespace BR
 
             int newDynastyId = ExtraLib.Sql.createDynasty(this.ddlNewDynasty.Text.ToString(), theOldDynasty.userId, theOldDynasty.gameId, theOldDynasty.country);
 
+            //TODO: new king should be 5 yrs younger than old king and could have more chldren.
             int kingId = ExtraLib.Sql.CreateCharacter(BR.ExtraLib.Names.getName(theOldDynasty.country, 'M'), 0, 0, 0, 'M', (Convert.ToInt32(Session["Turn"]) - 5) , theOldDynasty.gameId, -1, -1, newDynastyId);
 
             ExtraLib.Sql.crownKing(kingId);
@@ -880,7 +883,7 @@ namespace BR
             ExtraLib.Sql.marriage(kingId, queenId);
             char childGender = ExtraLib.Dice.male();
 
-            ExtraLib.Sql.CreateCharacter(BR.ExtraLib.Names.getName(theOldDynasty.country, childGender), ExtraLib.Dice.createStat(), ExtraLib.Dice.createStat(), ExtraLib.Dice.createStat(), childGender, -1, theOldDynasty.gameId, kingId, queenId, newDynastyId);
+            ExtraLib.Sql.CreateCharacter(BR.ExtraLib.Names.getName(theOldDynasty.country, childGender), ExtraLib.Dice.createStat(), ExtraLib.Dice.createStat(), ExtraLib.Dice.createStat(), childGender, (Convert.ToInt32(Session["Turn"]) - 1), theOldDynasty.gameId, kingId, queenId, newDynastyId);
 
             ExtraLib.Sql.setDynastyToNoUser(dynastyId);
 

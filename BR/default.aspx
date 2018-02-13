@@ -18,16 +18,16 @@
         
         <asp:GridView ID="gvGameList" runat="server" DataSourceID="odsGameList" AutoGenerateColumns="False" OnRowCommand="gvGameList_RowCommand" OnRowDataBound="gvGameList_RowDataBound">
             <Columns>
-                <asp:BoundField DataField="gameId" HeaderText="gameId" ReadOnly="True" SortExpression="gameId" />
+                <asp:BoundField DataField="gameId" HeaderText="Id" ReadOnly="True"  SortExpression="gameId" />
 
-                <asp:TemplateField>                
+                <asp:TemplateField HeaderText="Name">                
                     <ItemTemplate>
-                        <asp:LinkButton ID="lbViewGame" runat="server" Text='<%#Eval("Gamename") %>' CommandName="ViewGame" CommandArgument='<%#Eval("GameId") %>'></asp:LinkButton>
+                        <asp:LinkButton ID="lbViewGame" runat="server"  Text='<%#Eval("Gamename") %>' CommandName="ViewGame" CommandArgument='<%#Eval("GameId") %>'></asp:LinkButton>
                      </ItemTemplate>
                 </asp:TemplateField>
 
                 
-                <asp:BoundField DataField="turn" HeaderText="turn" ReadOnly="True" SortExpression="turn" />
+                <asp:BoundField DataField="turn" HeaderText="Turn" ReadOnly="True" SortExpression="turn" />
                  <asp:TemplateField>                
                     <ItemTemplate>
                         <asp:LinkButton ID="lbDeleteGame" runat="server" Text='Delete' CommandName="DeleteGame" CommandArgument='<%#Eval("GameId") %>'  Visible="false"></asp:LinkButton>
@@ -58,17 +58,33 @@
                 <asp:CheckBox ID="cbSpain" runat="server" Text="Spain" OnCheckedChanged="cbSpain_CheckedChanged" AutoPostBack="true" />
             </div>
             <div class="row">
-                <asp:Label ID="lblDynasty" runat="server" Text="Dynasty"></asp:Label>  
-                <asp:DropDownList ID="ddlEngland" runat="server" Visible="false" > </asp:DropDownList>
-                <asp:DropDownList ID="ddlFrance" runat="server" Visible="false"></asp:DropDownList>
-                <asp:DropDownList ID="ddlGermany" runat="server" Visible="false"></asp:DropDownList>
-                <asp:DropDownList ID="ddlItaly" runat="server" Visible="false"></asp:DropDownList>
-                <asp:DropDownList ID="ddlSpain" runat="server" Visible="false"></asp:DropDownList>
-            </div>
+                <asp:Label ID="lblDynasty" runat="server" Text="Dynasty"></asp:Label> 
+                <div class="col-md-12">
+                    <asp:DropDownList ID="ddlEngland" runat="server" Visible="false" > </asp:DropDownList>
+                    
+                </div> 
+                <section class="col">
+                     <asp:DropDownList ID="ddlFrance" runat="server" Visible="false"></asp:DropDownList>
+                </section> 
+                <section class="col">
+                     <asp:DropDownList ID="ddlGermany" runat="server" Visible="false"></asp:DropDownList>
+                </section> 
+                <section class="col">
+                    <asp:DropDownList ID="ddlItaly" runat="server" Visible="false"></asp:DropDownList>
+                </section> 
+                <section class="col">
+                    <asp:DropDownList ID="ddlSpain" runat="server" Visible="false"></asp:DropDownList>
+                </section> 
+                
+               
+               
+                
+                
+            </div> <!-- row  -->
 
             <div class="row">
                 <asp:Label ID="lblPlayer" runat="server" Text="Player"></asp:Label>
-                <asp:DropDownList ID="ddlEnglandPlayer" runat="server" Visible="false" > </asp:DropDownList>
+                <asp:DropDownList ID="ddlEnglandPlayer" runat="server" Visible="false"   > </asp:DropDownList>
                 <asp:DropDownList ID="ddlFrancePlayer" runat="server" Visible="false"></asp:DropDownList>
                 <asp:DropDownList ID="ddlGermanyPlayer" runat="server" Visible="false"></asp:DropDownList>
                 <asp:DropDownList ID="ddlItalyPlayer" runat="server" Visible="false"></asp:DropDownList>
@@ -81,6 +97,10 @@
             </div>
 
         </asp:Panel>
+        The creator of the game can run everything and sees everything.<br/>
+        Players can be added to the countries and they have a limited view.
+
+
 
         <asp:ScriptManager ID="ScriptManagerDeleteGame" runat="server"></asp:ScriptManager>
         <ajaxToolkit:ModalPopupExtender ID="ModalPopupExtenderDeleteGame" runat="server" BackgroundCssClass="modalBackground" CancelControlID="btnCancel" TargetControlID="btnToFoolModalPopUp" PopupControlID="PanelDeleteGame"></ajaxToolkit:ModalPopupExtender>
@@ -92,6 +112,11 @@
 
            <asp:Button ID="btnToFoolModalPopUp" runat="server" Text="Button" style = "display:none" /> 
     </form>
+
+         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="JavaScript1.js"></script>
 </body>
 </html>
