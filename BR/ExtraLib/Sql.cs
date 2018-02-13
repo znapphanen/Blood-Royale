@@ -837,7 +837,7 @@ namespace BR.ExtraLib
 
             using (SqlConnection cn = DataAccess.DataAccessFactory.GetDataAccess())
             {
-                string query = "Select DynastyId FROM Dynasties WHERE GameId= '" + gameId + "' AND Country= '" + country + "';";
+                string query = "Select DynastyId FROM Dynasties WHERE GameId= '" + gameId + "' AND Country= '" + country + "' AND UserId IS NOT NULL;";
                 SqlCommand cmd = new SqlCommand(query, cn);
                 cn.Open();
                 SqlDataReader reader;

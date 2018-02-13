@@ -14,6 +14,7 @@ namespace BR
         protected void Page_Load(object sender, EventArgs e)
         {
             master.showPanels(this.panelEnglandCharacterList, this.panelFranceCharacterList, this.panelGermanyCharacterList, this.panelItalyCharacterList, this.panelSpainCharacterList);
+            
 
         }
 
