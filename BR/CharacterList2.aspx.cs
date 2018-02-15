@@ -87,7 +87,7 @@ namespace BR
             BR.Model.Character spouse = BR.ExtraLib.Sql.getCharacter(spouseId);
             if (spouse != null)
             {
-                lblSpouseInfo.Text = spouse.firstName + " " + spouse.dynastyName + " " + spouse.age;
+                lblSpouseInfo.Text = spouse.firstName + " " + spouse.dynastyName + " " + spouse.age +"yrs, " + spouse.str + " Str, " + spouse.cha + " Cha, " + spouse.con + " Con";
 
                 switch (spouse.country)
                 {
