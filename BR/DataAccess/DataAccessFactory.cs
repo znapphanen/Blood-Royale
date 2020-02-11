@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Configuration;
-using MySql.Data.MySqlClient;
+
 using System.Data.SqlClient;
 
 namespace BR.DataAccess
@@ -23,7 +23,7 @@ namespace BR.DataAccess
         private DataAccessFactory() { }
 
 
-        public static  MySqlConnection GetDataAccessMySql()  //not used
+     /*   public static  MySqlConnection GetDataAccessMySql()  //not used
         {
              MySqlConnection connection;
              if (ConfigurationManager.AppSettings[connectionStringSettingName] == null)
@@ -34,7 +34,7 @@ namespace BR.DataAccess
             //Initialize mysql connection
              return connection = new MySqlConnection(ConfigurationManager.AppSettings[connectionStringSettingName]);
            
-        } 
+        } */
 
         public static SqlConnection GetDataAccess()
         {

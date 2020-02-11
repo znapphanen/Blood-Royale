@@ -29,6 +29,7 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -87,9 +88,6 @@
     <Content Include="Logout.aspx" />
     <Content Include="Main.aspx" />
     <Content Include="Login.aspx" />
-    <Content Include="old-mysql\Procedures.sql" />
-    <Content Include="old-mysql\Tables.sql" />
-    <Content Include="old-mysql\Views.sql" />
     <Content Include="readme.txt" />
     <Content Include="Register.aspx" />
     <Content Include="SQL\Misc.sql" />
@@ -130,7 +128,6 @@
     <Compile Include="ContractList.aspx.designer.cs">
       <DependentUpon>ContractList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ExtraLib\MySql.cs" />
     <Compile Include="ExtraLib\Security.cs" />
     <Compile Include="Logout.aspx.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
@@ -184,7 +181,6 @@
     <Compile Include="Model\MarriageOffer.cs" />
     <Compile Include="Model\MarriageOfferCollection.cs" />
     <Compile Include="Model\User.cs" />
-    <Compile Include="Model\UserCollection.cs" />
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

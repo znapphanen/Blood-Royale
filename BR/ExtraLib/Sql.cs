@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using MySql.Data.MySqlClient;
+
 using System.Data;
 using BR.Model;
 using System.Data.SqlClient;
